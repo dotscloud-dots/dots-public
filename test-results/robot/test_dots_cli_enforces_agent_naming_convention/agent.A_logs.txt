@@ -1,2 +1,2 @@
-[2025-07-16T15:36:25Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
-[2025-07-16T15:36:25Z ERROR] Error encountered while checking dot name!: 'Agent name 'agent.A' is invalid. It shall contain only regular upper and lowercase characters (a-z and A-Z), numbers and the symbols '-' and '_'.'
+[2025-07-16T15:52:17Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:52:17Z ERROR] Error encountered while checking dot name!: 'Agent name 'agent.A' is invalid. It shall contain only regular upper and lowercase characters (a-z and A-Z), numbers and the symbols '-' and '_'.'

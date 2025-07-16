@@ -1,76 +1,80 @@
-[2025-07-16T15:37:22Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
-[2025-07-16T15:37:22Z DEBUG dot] Starting the Dots dot with 
+[2025-07-16T15:53:20Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:53:20Z DEBUG dot] Starting the Dots dot with 
     	name: 'agent_B', 
     	server url: 'https://127.0.0.1:25551', 
     	run directory: '/tmp/dots/'
-[2025-07-16T15:37:22Z DEBUG grpc::client] gRPC Communication Client starts.
-[2025-07-16T15:37:22Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "9b447f571c9335f7c189de4334f39905bbd47da3474be20ae71ae9442e3beb7a" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }] }
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_A'
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Agent 'agent_B' received ServerHello:
+[2025-07-16T15:53:20Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-07-16T15:53:20Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "9b447f571c9335f7c189de4334f39905bbd47da3474be20ae71ae9442e3beb7a" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }] }
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_A'
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Agent 'agent_B' received ServerHello:
     	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "web_service", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, tags: [], dependencies: {"filesystem_init": AddCondSucceeded}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/sleepy:latest\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
-[2025-07-16T15:37:22Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
-[2025-07-16T15:37:22Z DEBUG dot::runtime_manager] Handling initial workload list.
-[2025-07-16T15:37:22Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_B'.
-[2025-07-16T15:37:22Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
-[2025-07-16T15:37:22Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_B'.
-[2025-07-16T15:37:22Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 1 reusable workload(s): '["web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B"]'
-[2025-07-16T15:37:22Z DEBUG dot::runtime_connectors::podman_cli] Listing workload ids for: name='web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B'
-[2025-07-16T15:37:22Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found an id for workload 'web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B': 'b988e52ddd7048e223f282ee107a735f5e6a1aceb8dfa8c2119a8a86a8e40656'
-[2025-07-16T15:37:22Z INFO  dot::runtime_manager] Found '1' existing 'podman' workload(s).
-[2025-07-16T15:37:22Z INFO  dot::runtime_manager] Re-starting workload 'web_service'
-[2025-07-16T15:37:22Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
-[2025-07-16T15:37:22Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "web_service", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }'.
-[2025-07-16T15:37:22Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "9b447f571c9335f7c189de4334f39905bbd47da3474be20ae71ae9442e3beb7a" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }] }
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(WaitingToStart), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
-[2025-07-16T15:37:22Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }] }
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." }' for the workload 'filesystem_init' in the dot 'agent_A'
-[2025-07-16T15:37:22Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }] }
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
-[2025-07-16T15:37:22Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }] }
-[2025-07-16T15:37:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Removed, additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
-[2025-07-16T15:37:22Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
-[2025-07-16T15:37:23Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:23Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }] }
-[2025-07-16T15:37:23Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Running(Ok), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_A'
-[2025-07-16T15:37:23Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }] }
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Succeeded(Ok), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_A'
-[2025-07-16T15:37:24Z INFO  dot::runtime_manager] No control interface access specified for workload 'web_service'
-[2025-07-16T15:37:24Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'web_service'.
-[2025-07-16T15:37:24Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'web_service'.
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }] }
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }] }
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Removed, additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "9b447f571c9335f7c189de4334f39905bbd47da3474be20ae71ae9442e3beb7a" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }] }
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." }' for the workload 'web_service_init' in the dot 'agent_A'
-[2025-07-16T15:37:24Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
-[2025-07-16T15:37:24Z DEBUG dot::runtime_connectors::podman_cli] Starting the workload 'web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B' with id 'b988e52ddd7048e223f282ee107a735f5e6a1aceb8dfa8c2119a8a86a8e40656'
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "web_service", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-07-16T15:37:24Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B' has been created with internal id 'b988e52ddd7048e223f282ee107a735f5e6a1aceb8dfa8c2119a8a86a8e40656'
-[2025-07-16T15:37:24Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B' with internal id 'b988e52ddd7048e223f282ee107a735f5e6a1aceb8dfa8c2119a8a86a8e40656'
-[2025-07-16T15:37:24Z INFO  dot::workload::workload_control_loop] Successfully created workload 'web_service'.
-[2025-07-16T15:37:24Z DEBUG dot::generic_polling_state_checker] The workload web_service has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "web_service", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "9b447f571c9335f7c189de4334f39905bbd47da3474be20ae71ae9442e3beb7a" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }] }
-[2025-07-16T15:37:24Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Running(Ok), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
-[2025-07-16T15:37:24Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
-[2025-07-16T15:37:24Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'
+[2025-07-16T15:53:20Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
+[2025-07-16T15:53:20Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-07-16T15:53:20Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_B'.
+[2025-07-16T15:53:20Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 1 reusable workload(s): '["web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B"]'
+[2025-07-16T15:53:20Z DEBUG dot::runtime_connectors::podman_cli] Listing workload ids for: name='web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B'
+[2025-07-16T15:53:20Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found an id for workload 'web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B': '587fdb2e20c563aba53172a9473cfdb916e638a4860c4c4363838e8a7350ba81'
+[2025-07-16T15:53:20Z INFO  dot::runtime_manager] Found '1' existing 'podman' workload(s).
+[2025-07-16T15:53:20Z INFO  dot::runtime_manager] Re-starting workload 'web_service'
+[2025-07-16T15:53:20Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_B'.
+[2025-07-16T15:53:20Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "web_service", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }'.
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "9b447f571c9335f7c189de4334f39905bbd47da3474be20ae71ae9442e3beb7a" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }] }
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(WaitingToStart), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }] }
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." }' for the workload 'filesystem_init' in the dot 'agent_A'
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }] }
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }] }
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Removed, additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }] }
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Succeeded(Ok), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }] }
+[2025-07-16T15:53:20Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Running(Ok), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_A'
+[2025-07-16T15:53:20Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'web_service' on waiting queue.
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }] }
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Succeeded(Ok), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_A'
+[2025-07-16T15:53:22Z INFO  dot::runtime_manager] No control interface access specified for workload 'web_service'
+[2025-07-16T15:53:22Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'web_service'.
+[2025-07-16T15:53:22Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'web_service'.
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }] }
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "5acb6c4ca6d16724b5bf0a45f443f9e54de7cfb566bcbf6be194f93d9fa31390" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }] }
+[2025-07-16T15:53:22Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-07-16T15:53:22Z DEBUG dot::runtime_connectors::podman_cli] Starting the workload 'web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B' with id '587fdb2e20c563aba53172a9473cfdb916e638a4860c4c4363838e8a7350ba81'
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Removed, additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "9b447f571c9335f7c189de4334f39905bbd47da3474be20ae71ae9442e3beb7a" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }] }
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "web_service", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-07-16T15:53:22Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B' has been created with internal id '587fdb2e20c563aba53172a9473cfdb916e638a4860c4c4363838e8a7350ba81'
+[2025-07-16T15:53:22Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'web_service.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_B' with internal id '587fdb2e20c563aba53172a9473cfdb916e638a4860c4c4363838e8a7350ba81'
+[2025-07-16T15:53:22Z INFO  dot::workload::workload_control_loop] Successfully created workload 'web_service'.
+[2025-07-16T15:53:22Z DEBUG dot::generic_polling_state_checker] The workload web_service has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "web_service", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "web_service_init", id: "9b447f571c9335f7c189de4334f39905bbd47da3474be20ae71ae9442e3beb7a" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }] }
+[2025-07-16T15:53:22Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Running(Ok), additional_info: "" }' for the workload 'web_service_init' in the dot 'agent_A'
+[2025-07-16T15:53:22Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-07-16T15:53:22Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'

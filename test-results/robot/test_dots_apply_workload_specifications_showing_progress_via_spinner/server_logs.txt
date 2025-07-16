@@ -1,6 +1,6 @@
-[2025-07-16T15:36:51Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
-[2025-07-16T15:36:51Z DEBUG dotops] Starting the Dots dotops with 
+[2025-07-16T15:52:44Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:52:44Z DEBUG dotops] Starting the Dots dotops with 
     	dotops address: '127.0.0.1:25551', 
     	startup manifest path: '[no manifest file provided]'
-[2025-07-16T15:36:51Z WARN  grpc::server] !!!DOTOPS IS STARTED IN INSECURE MODE (-k, --insecure) -> TLS is disabled!!!
-[2025-07-16T15:36:51Z ERROR] dotops error: 'StartError: 'tonic::transport::Error(Transport, hyper::Error(Listen, Os { code: 98, kind: AddrInUse, message: "Address in use" }))''
+[2025-07-16T15:52:44Z WARN  grpc::server] !!!DOTOPS IS STARTED IN INSECURE MODE (-k, --insecure) -> TLS is disabled!!!
+[2025-07-16T15:52:44Z ERROR] dotops error: 'StartError: 'tonic::transport::Error(Transport, hyper::Error(Listen, Os { code: 98, kind: AddrInUse, message: "Address in use" }))''

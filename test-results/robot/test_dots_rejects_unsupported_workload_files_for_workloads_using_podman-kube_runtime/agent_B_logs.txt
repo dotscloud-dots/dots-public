@@ -1,30 +1,30 @@
-[2025-07-16T15:38:38Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
-[2025-07-16T15:38:38Z DEBUG dot] Starting the Dots dot with 
+[2025-07-16T15:54:35Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:54:35Z DEBUG dot] Starting the Dots dot with 
     	name: 'agent_B', 
     	server url: 'https://127.0.0.1:25551', 
     	run directory: '/tmp/dots/'
-[2025-07-16T15:38:38Z DEBUG grpc::client] gRPC Communication Client starts.
-[2025-07-16T15:38:38Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
-[2025-07-16T15:38:38Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:38:38Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "workload_with_mounted_binary_file", id: "81784b25a56f5cb6c2bc3b0f4758b64a5381fd73dadeefb1fb0a9d7315756d77" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "workload_with_mounted_text_file", id: "f9fdda60c9fe305be59fa2e4d4941b9c261431271d58c297be246157343b552c" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }] }
-[2025-07-16T15:38:38Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'workload_with_mounted_binary_file' in the dot 'agent_A'
-[2025-07-16T15:38:38Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'workload_with_mounted_text_file' in the dot 'agent_A'
-[2025-07-16T15:38:38Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:38:38Z DEBUG dot::agent_manager] Agent 'agent_B' received ServerHello:
+[2025-07-16T15:54:35Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-07-16T15:54:35Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-07-16T15:54:35Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:54:35Z DEBUG dot::agent_manager] Agent 'agent_B' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "workload_with_mounted_text_file", id: "f9fdda60c9fe305be59fa2e4d4941b9c261431271d58c297be246157343b552c" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "workload_with_mounted_binary_file", id: "81784b25a56f5cb6c2bc3b0f4758b64a5381fd73dadeefb1fb0a9d7315756d77" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }] }
+[2025-07-16T15:54:35Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'workload_with_mounted_text_file' in the dot 'agent_A'
+[2025-07-16T15:54:35Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'workload_with_mounted_binary_file' in the dot 'agent_A'
+[2025-07-16T15:54:35Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:54:35Z DEBUG dot::agent_manager] Agent 'agent_B' received ServerHello:
     	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "kube_workload_with_unsupported_files", id: "155bf4adf0a998007976a1c44bd91af97a5bced15f2b5e961597e1ca02312760" }, tags: [], dependencies: {}, restart_policy: Never, runtime: "podman-kube", runtime_config: "manifest: |\n  apiVersion: v1\n  kind: Pod\n  metadata:\n    name: nginx-pod\n  spec:\n    restartPolicy: Never\n    containers:\n    - name: nginx-container\n      image: dotscloud/nginx:latest\n      ports:\n      - containerPort: 80\n        hostPort: 8081\n", files: [File { mount_point: "/etc/nginx/nginx.conf", file_content: Data(Data { data: "worker_processes  1;\n\nevents {\n    worker_connections  1024;\n}\n\nhttp {\n    server {\n        listen 80;\n        server_name custom_nginx;\n\n        location /custom {\n            default_type text/plain;\n            return 200 \"The mounted custom nginx.conf is being used!\\n\";\n        }\n    }\n}\n" }) }], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
-[2025-07-16T15:38:38Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
-[2025-07-16T15:38:38Z DEBUG dot::runtime_manager] Handling initial workload list.
-[2025-07-16T15:38:38Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_B'.
-[2025-07-16T15:38:38Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
-[2025-07-16T15:38:38Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
-[2025-07-16T15:38:38Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_B'.
-[2025-07-16T15:38:38Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
-[2025-07-16T15:38:38Z INFO  dot::runtime_manager] No control interface access specified for workload 'kube_workload_with_unsupported_files'
-[2025-07-16T15:38:38Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'kube_workload_with_unsupported_files'.
-[2025-07-16T15:38:38Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman-kube' workload 'kube_workload_with_unsupported_files'.
-[2025-07-16T15:38:38Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
-[2025-07-16T15:38:38Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "kube_workload_with_unsupported_files", id: "155bf4adf0a998007976a1c44bd91af97a5bced15f2b5e961597e1ca02312760" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-07-16T15:38:38Z ERROR dot::workload::workload_control_loop] Failed to create workload with error: 'Workload files are not supported for runtime podman-kube. Use ConfigMaps instead.'
-[2025-07-16T15:38:38Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "kube_workload_with_unsupported_files", id: "155bf4adf0a998007976a1c44bd91af97a5bced15f2b5e961597e1ca02312760" }, execution_state: ExecutionState { state: Pending(StartingFailed), additional_info: "Workload files are not supported for runtime podman-kube. Use ConfigMaps instead." } }'.
-[2025-07-16T15:38:38Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
-[2025-07-16T15:38:38Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'
+[2025-07-16T15:54:35Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
+[2025-07-16T15:54:35Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-07-16T15:54:35Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_B'.
+[2025-07-16T15:54:35Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
+[2025-07-16T15:54:35Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
+[2025-07-16T15:54:35Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_B'.
+[2025-07-16T15:54:35Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-07-16T15:54:35Z INFO  dot::runtime_manager] No control interface access specified for workload 'kube_workload_with_unsupported_files'
+[2025-07-16T15:54:35Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'kube_workload_with_unsupported_files'.
+[2025-07-16T15:54:35Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman-kube' workload 'kube_workload_with_unsupported_files'.
+[2025-07-16T15:54:35Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-07-16T15:54:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "kube_workload_with_unsupported_files", id: "155bf4adf0a998007976a1c44bd91af97a5bced15f2b5e961597e1ca02312760" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-07-16T15:54:35Z ERROR dot::workload::workload_control_loop] Failed to create workload with error: 'Workload files are not supported for runtime podman-kube. Use ConfigMaps instead.'
+[2025-07-16T15:54:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "kube_workload_with_unsupported_files", id: "155bf4adf0a998007976a1c44bd91af97a5bced15f2b5e961597e1ca02312760" }, execution_state: ExecutionState { state: Pending(StartingFailed), additional_info: "Workload files are not supported for runtime podman-kube. Use ConfigMaps instead." } }'.
+[2025-07-16T15:54:35Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-07-16T15:54:35Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'

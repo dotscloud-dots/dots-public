@@ -1,39 +1,41 @@
-[2025-07-16T15:37:08Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
-[2025-07-16T15:37:08Z DEBUG dot] Starting the Dots dot with 
+[2025-07-16T15:53:02Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:53:02Z DEBUG dot] Starting the Dots dot with 
     	name: 'agent_A', 
     	server url: 'https://127.0.0.1:25551', 
     	run directory: '/tmp/dots/'
-[2025-07-16T15:37:08Z WARN  dot] Insecure and secure flags specified at the same time. Defaulting to secure communication.
-[2025-07-16T15:37:08Z DEBUG grpc::client] gRPC Communication Client starts.
-[2025-07-16T15:37:08Z DEBUG rustls::anchors] add_parsable_certificates processed 1 valid and 0 invalid certs
-[2025-07-16T15:37:08Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
-[2025-07-16T15:37:08Z DEBUG rustls::client::hs] No cached session for DnsName("dotops")
-[2025-07-16T15:37:08Z DEBUG rustls::client::hs] Not resuming any session
-[2025-07-16T15:37:08Z DEBUG rustls::client::hs] Using ciphersuite TLS13_AES_256_GCM_SHA384
-[2025-07-16T15:37:08Z DEBUG rustls::client::tls13] Not resuming
-[2025-07-16T15:37:08Z DEBUG rustls::client::tls13] TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)]), ServerNameAck]
-[2025-07-16T15:37:08Z DEBUG rustls::client::hs] ALPN protocol is Some(b"h2")
-[2025-07-16T15:37:08Z DEBUG rustls::client::tls13] Got CertificateRequest CertificateRequestPayloadTLS13 { context: , extensions: [SignatureAlgorithms([ECDSA_NISTP384_SHA384, ECDSA_NISTP256_SHA256, ED25519, RSA_PSS_SHA512, RSA_PSS_SHA384, RSA_PSS_SHA256, RSA_PKCS1_SHA512, RSA_PKCS1_SHA384, RSA_PKCS1_SHA256]), AuthorityNames([DistinguishedName(30123110300e06035504030c07646f74732d6361)])] }
-[2025-07-16T15:37:08Z DEBUG rustls::client::common] Attempting client auth
-[2025-07-16T15:37:08Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-07-16T15:37:08Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
+[2025-07-16T15:53:02Z WARN  dot] Insecure and secure flags specified at the same time. Defaulting to secure communication.
+[2025-07-16T15:53:02Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-07-16T15:53:02Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-07-16T15:53:02Z DEBUG rustls::anchors] add_parsable_certificates processed 1 valid and 0 invalid certs
+[2025-07-16T15:53:02Z DEBUG rustls::client::hs] No cached session for DnsName("dotops")
+[2025-07-16T15:53:02Z DEBUG rustls::client::hs] Not resuming any session
+[2025-07-16T15:53:02Z DEBUG rustls::client::hs] Using ciphersuite TLS13_AES_256_GCM_SHA384
+[2025-07-16T15:53:02Z DEBUG rustls::client::tls13] Not resuming
+[2025-07-16T15:53:02Z DEBUG rustls::client::tls13] TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)]), ServerNameAck]
+[2025-07-16T15:53:02Z DEBUG rustls::client::hs] ALPN protocol is Some(b"h2")
+[2025-07-16T15:53:02Z DEBUG rustls::client::tls13] Got CertificateRequest CertificateRequestPayloadTLS13 { context: , extensions: [SignatureAlgorithms([ECDSA_NISTP384_SHA384, ECDSA_NISTP256_SHA256, ED25519, RSA_PSS_SHA512, RSA_PSS_SHA384, RSA_PSS_SHA256, RSA_PKCS1_SHA512, RSA_PKCS1_SHA384, RSA_PKCS1_SHA256]), AuthorityNames([DistinguishedName(30123110300e06035504030c07646f74732d6361)])] }
+[2025-07-16T15:53:02Z DEBUG rustls::client::common] Attempting client auth
+[2025-07-16T15:53:02Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:53:02Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
     	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "simple", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, tags: [], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [ \"echo\", \"Hello Dots\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
-[2025-07-16T15:37:08Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
-[2025-07-16T15:37:08Z DEBUG dot::runtime_manager] Handling initial workload list.
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
-[2025-07-16T15:37:08Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
-[2025-07-16T15:37:08Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
-[2025-07-16T15:37:08Z INFO  dot::runtime_manager] No control interface access specified for workload 'simple'
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'simple'.
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'simple'.
-[2025-07-16T15:37:08Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
-[2025-07-16T15:37:08Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "simple", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' with image 'dotscloud/nginx:latest'
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A", "--label=name=simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "echo", "Hello Dots"]'
-[2025-07-16T15:37:08Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
-[2025-07-16T15:37:08Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' has been created with internal id '38d6a05b6cc151bb25cf87b41473d98768a3b98c689998329b0d6c2259872a56'
-[2025-07-16T15:37:08Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' with internal id '38d6a05b6cc151bb25cf87b41473d98768a3b98c689998329b0d6c2259872a56'
-[2025-07-16T15:37:08Z INFO  dot::workload::workload_control_loop] Successfully created workload 'simple'.
+[2025-07-16T15:53:02Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
+[2025-07-16T15:53:02Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
+[2025-07-16T15:53:02Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
+[2025-07-16T15:53:02Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
+[2025-07-16T15:53:02Z INFO  dot::runtime_manager] No control interface access specified for workload 'simple'
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'simple'.
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'simple'.
+[2025-07-16T15:53:02Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-07-16T15:53:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "simple", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' with image 'dotscloud/nginx:latest'
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A", "--label=name=simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "echo", "Hello Dots"]'
+[2025-07-16T15:53:02Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-07-16T15:53:02Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' has been created with internal id 'ee9dd721a6200e93cf12c7bf1540fb3058d2fc7b4b6904af5e37f947f2cf6be6'
+[2025-07-16T15:53:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' with internal id 'ee9dd721a6200e93cf12c7bf1540fb3058d2fc7b4b6904af5e37f947f2cf6be6'
+[2025-07-16T15:53:02Z INFO  dot::workload::workload_control_loop] Successfully created workload 'simple'.
+[2025-07-16T15:53:02Z DEBUG dot::generic_polling_state_checker] The workload simple has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-07-16T15:53:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "simple", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
