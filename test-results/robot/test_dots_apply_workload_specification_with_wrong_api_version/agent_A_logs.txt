@@ -1,0 +1,31 @@
+[2025-07-16T15:37:03Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:37:03Z DEBUG dot] Starting the Dots dot with 
+    	name: 'agent_A', 
+    	server url: 'https://127.0.0.1:25551', 
+    	run directory: '/tmp/dots/'
+[2025-07-16T15:37:03Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-07-16T15:37:03Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-07-16T15:37:03Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:03Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
+    	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "simple", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, tags: [], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [ \"echo\", \"Hello Dots\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
+[2025-07-16T15:37:03Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
+[2025-07-16T15:37:03Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
+[2025-07-16T15:37:03Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
+[2025-07-16T15:37:03Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
+[2025-07-16T15:37:03Z INFO  dot::runtime_manager] No control interface access specified for workload 'simple'
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'simple'.
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'simple'.
+[2025-07-16T15:37:03Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-07-16T15:37:03Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "simple", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' with image 'dotscloud/nginx:latest'
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A", "--label=name=simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "echo", "Hello Dots"]'
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' has been created with internal id '205424df965df32edf7a0f390a111cbf224884cee5ad60ce1a26d2b36b964e74'
+[2025-07-16T15:37:03Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'simple.3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e.agent_A' with internal id '205424df965df32edf7a0f390a111cbf224884cee5ad60ce1a26d2b36b964e74'
+[2025-07-16T15:37:03Z INFO  dot::workload::workload_control_loop] Successfully created workload 'simple'.
+[2025-07-16T15:37:03Z DEBUG dot::generic_polling_state_checker] The workload simple has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-07-16T15:37:03Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "simple", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-07-16T15:37:03Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-07-16T15:37:03Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'

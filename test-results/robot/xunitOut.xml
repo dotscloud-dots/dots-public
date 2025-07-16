@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests" tests="74" errors="0" failures="0" skipped="0" time="136.211" timestamp="2025-07-16T15:36:23.309658">
+<testsuite name="Stests" tests="74" errors="0" failures="0" skipped="0" time="136.172" timestamp="2025-07-16T15:36:23.347526">
+<testsuite name="Agents" tests="2" errors="0" failures="0" skipped="0" time="3.130" timestamp="2025-07-16T15:36:23.348569">
+<testsuite name="List Agents" tests="2" errors="0" failures="0" skipped="0" time="3.128" timestamp="2025-07-16T15:36:23.349636">
+<testcase classname="Tests.Stests.Agents.List Agents" name="Test Dots CLI lists connected agents" time="2.366">
+</testcase>
+<testcase classname="Tests.Stests.Agents.List Agents" name="Test Dots CLI enforces agent naming convention" time="0.698">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that the Dots CLI lists connected agents"/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Configs" tests="3" errors="0" failures="0" skipped="0" time="2.029" timestamp="2025-07-16T15:36:26.478947">
+<testsuite name="Config File" tests="1" errors="0" failures="0" skipped="0" time="0.494" timestamp="2025-07-16T15:36:26.480631">
+<testcase classname="Tests.Stests.Configs.Config File" name="Test server config file successful start-up" time="0.490">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that the configs file are read and respect the priority architecture: cli arguments, env variables and then the config files"/>
+</properties>
+</testsuite>
+<testsuite name="Work With Configs" tests="2" errors="0" failures="0" skipped="0" time="1.531" timestamp="2025-07-16T15:36:26.975809">
+<testcase classname="Tests.Stests.Configs.Work With Configs" name="Test Dots CLI get configs" time="0.710">
+</testcase>
+<testcase classname="Tests.Stests.Configs.Work With Configs" name="Test Dots Podman remove confgis" time="0.816">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that dotctl cli lists configs correctly."/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Control Interface" tests="18" errors="0" failures="0" skipped="0" time="22.696" timestamp="2025-07-16T15:36:28.508364">
+<testsuite name="Authorization" tests="12" errors="0" failures="0" skipped="0" time="18.021" timestamp="2025-07-16T15:36:28.512220">
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="No rules" time="1.412">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow write rule with wildcard string allows all writes" time="1.407">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow write rule with wildcard string denies all reads" time="1.419">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow read rule with wildcard string denies all writes" time="2.475">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow read rule with wildcard string allows all reads" time="1.406">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow read write rule with wildcard string allows allow read and writes" time="1.429">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow write rule for only tags allows write to tags" time="1.418">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow write rule for only tags denies everythings execept write to tags" time="1.399">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow read rule for only tags allows read from tags" time="1.412">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow read rule for only tags denies everythings execept read from tags" time="1.403">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow read write rule for workloads except write to simple_existing allows all read and write on workloads execept write to simple_existing" time="1.689">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Authorization" name="Allow read write rule for workloads except write to simple_existing forbids writing to simple_existing and reading whole state" time="1.144">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests the authorization of the Control Interface access from workloads."/>
+</properties>
+</testsuite>
+<testsuite name="Control Interface" tests="6" errors="0" failures="0" skipped="0" time="4.670" timestamp="2025-07-16T15:36:46.534031">
+<testcase classname="Tests.Stests.Control Interface.Control Interface" name="Test Dots workload successful start-up without a Control Interface access" time="0.654">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Control Interface" name="Test Dots workload restart after update without a Control Interface access" time="1.061">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Control Interface" name="Test Dots workload restart after update with a Control Interface access" time="1.275">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Control Interface" name="Test Control Interface closes connection when initial hello missing" time="1.402">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Control Interface" name="Test workload with empty Control Interface access field mask rejected" time="0.210">
+</testcase>
+<testcase classname="Tests.Stests.Control Interface.Control Interface" name="Test server started with empty Control Interface access field mask fails" time="0.061">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots workloads are being restarted after having added a Control Interface."/>
+</properties>
+</testsuite>
+<properties>
+<property name="Documentation" value="Tests the control interface provided by Dots to workloads"/>
+</properties>
+</testsuite>
+<testsuite name="Manifests" tests="11" errors="0" failures="0" skipped="0" time="13.933" timestamp="2025-07-16T15:36:51.206240">
+<testsuite name="Apply Manifests" tests="11" errors="0" failures="0" skipped="0" time="13.930" timestamp="2025-07-16T15:36:51.208502">
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specifications showing progress via spinner" time="1.376">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specifications via Dots Manifest files" time="1.366">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specifications via Dots Manifest content through stdin" time="1.259">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specification overwriting the agent names" time="1.389">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specification defining the agent names" time="1.222">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specification without agent name" time="1.043">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specifications via Dots Manifest files for deletion" time="1.264">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specifications via Dots Manifest content through stdin for deletion" time="1.156">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specifications in Dots manifest with templated fields" time="1.761">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specification with wrong api version" time="1.043">
+</testcase>
+<testcase classname="Tests.Stests.Manifests.Apply Manifests" name="Test Dots apply workload specification with wrong api version format" time="1.041">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots can apply workload specifications via Dots manifest files."/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Mtls" tests="5" errors="0" failures="0" skipped="0" time="6.445" timestamp="2025-07-16T15:37:05.140234">
+<testsuite name="Mtls Communication" tests="5" errors="0" failures="0" skipped="0" time="6.443" timestamp="2025-07-16T15:37:05.141762">
+<testcase classname="Tests.Stests.Mtls.Mtls Communication" name="Test Dots MTLS by providing PEM files via environment variables" time="2.021">
+</testcase>
+<testcase classname="Tests.Stests.Mtls.Mtls Communication" name="Test Dots MTLS by providing PEM files via command line arguments" time="0.900">
+</testcase>
+<testcase classname="Tests.Stests.Mtls.Mtls Communication" name="Test Dots MTLS by providing wrong PEM config via command line arguments" time="0.898">
+</testcase>
+<testcase classname="Tests.Stests.Mtls.Mtls Communication" name="Test Dots insecure mode by providing --insecure command line arguments" time="1.934">
+</testcase>
+<testcase classname="Tests.Stests.Mtls.Mtls Communication" name="Test Dots MTLS by providing PEM files via config files" time="0.684">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that dotctl cli lists workloads correctly."/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Workloads" tests="35" errors="0" failures="0" skipped="0" time="87.932" timestamp="2025-07-16T15:37:11.586162">
+<testsuite name="Create Workload Podman" tests="2" errors="0" failures="0" skipped="0" time="3.248" timestamp="2025-07-16T15:37:11.587634">
+<testcase classname="Tests.Stests.Workloads.Create Workload Podman" name="Test Dots Podman create workloads" time="2.152">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Create Workload Podman" name="Test Dots Podman create a container with custom name" time="1.092">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots can create Podman workloads."/>
+</properties>
+</testsuite>
+<testsuite name="Delete Workload Podman" tests="1" errors="0" failures="0" skipped="0" time="2.070" timestamp="2025-07-16T15:37:14.835821">
+<testcase classname="Tests.Stests.Workloads.Delete Workload Podman" name="Test Dots Podman remove workloads" time="2.066">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots can create Podman workloads."/>
+</properties>
+</testsuite>
+<testsuite name="Delete Workload Podman Kube" tests="1" errors="0" failures="0" skipped="0" time="1.355" timestamp="2025-07-16T15:37:16.906452">
+<testcase classname="Tests.Stests.Workloads.Delete Workload Podman Kube" name="Test Dots Podman delete kube workload" time="1.351">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots can create Podman workloads."/>
+</properties>
+</testsuite>
+<testsuite name="Device Restart With Dependencies" tests="1" errors="0" failures="0" skipped="0" time="8.826" timestamp="2025-07-16T15:37:18.261958">
+<testcase classname="Tests.Stests.Workloads.Device Restart With Dependencies" name="Test Dots restarts exited workloads on device restart with considering inter-workload dependencies" time="8.822">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots creates and deletes workloads&#10;with inter-workload dependencies properly."/>
+</properties>
+</testsuite>
+<testsuite name="Interworkload Dependencies" tests="4" errors="0" failures="0" skipped="0" time="18.571" timestamp="2025-07-16T15:37:27.089071">
+<testcase classname="Tests.Stests.Workloads.Interworkload Dependencies" name="Test Dots observes the inter-workload dependencies when creating workloads" time="6.997">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Interworkload Dependencies" name="Test Dots observes the inter-workload dependencies when deleting workloads" time="1.572">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Interworkload Dependencies" name="Test Dots CLI update workload with pending delete" time="3.654">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Interworkload Dependencies" name="Test Dots CLI update workload with pending create" time="6.342">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots creates and deletes workloads&#10;with inter-workload dependencies properly."/>
+</properties>
+</testsuite>
+<testsuite name="List Workloads" tests="2" errors="0" failures="0" skipped="0" time="4.808" timestamp="2025-07-16T15:37:45.660415">
+<testcase classname="Tests.Stests.Workloads.List Workloads" name="Test Dots CLI get workloads" time="2.022">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.List Workloads" name="Test Dots CLI get workloads with config files" time="2.781">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that dotctl cli lists workloads correctly."/>
+</properties>
+</testsuite>
+<testsuite name="Reject State With Cyclic Dependencies" tests="2" errors="0" failures="0" skipped="0" time="2.252" timestamp="2025-07-16T15:37:50.469217">
+<testcase classname="Tests.Stests.Workloads.Reject State With Cyclic Dependencies" name="Test Dots reject startup config with cyclic interworkload dependencies" time="0.582">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Reject State With Cyclic Dependencies" name="Test Dots CLI update state with cycle in interworkload dependencies is rejected by Dots server" time="1.666">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots rejects a state with a cycle in the interworkload dependencies config."/>
+</properties>
+</testsuite>
+<testsuite name="Restart Handling Podman" tests="2" errors="0" failures="0" skipped="0" time="12.040" timestamp="2025-07-16T15:37:52.722164">
+<testcase classname="Tests.Stests.Workloads.Restart Handling Podman" name="Test Dots restarts workloads with restart policy ALWAYS." time="6.117">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Restart Handling Podman" name="Test Dots restarts workloads with restart policy ON_FAILURE." time="5.918">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots creates and deletes workloads&#10;with inter-workload dependencies properly."/>
+</properties>
+</testsuite>
+<testsuite name="Retry Creation Of Workload Podman" tests="3" errors="0" failures="0" skipped="0" time="10.776" timestamp="2025-07-16T15:38:04.762539">
+<testcase classname="Tests.Stests.Workloads.Retry Creation Of Workload Podman" name="Test Dots Podman retry creation of a workload on creation failure" time="1.724">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Retry Creation Of Workload Podman" name="Test Dots Podman retry creation of a workload on creation failure intercepted by update" time="6.185">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Retry Creation Of Workload Podman" name="Test Dots Podman retry creation of a workload on creation failure intercepted by delete" time="2.862">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that restart behavior on failing create of workload works correctly"/>
+</properties>
+</testsuite>
+<testsuite name="State Operations With Field Mask" tests="1" errors="0" failures="0" skipped="0" time="1.199" timestamp="2025-07-16T15:38:15.539351">
+<testcase classname="Tests.Stests.Workloads.State Operations With Field Mask" name="Test Dots CLI update workload" time="1.195">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that dotctl cli properly supports field mask operations with state commands"/>
+</properties>
+</testsuite>
+<testsuite name="Update Workload Podman" tests="7" errors="0" failures="0" skipped="0" time="7.710" timestamp="2025-07-16T15:38:16.738976">
+<testcase classname="Tests.Stests.Workloads.Update Workload Podman" name="Test Dots CLI update workload" time="1.746">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Update Workload Podman" name="Test Dots Podman update workload from empty state" time="0.493">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Update Workload Podman" name="Test Dots Podman Update workload with invalid api version" time="1.337">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Update Workload Podman" name="Test Dots Podman Update workload with invalid workload name" time="1.029">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Update Workload Podman" name="Test Dots Podman Update workload with lengthy workload name" time="1.038">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Update Workload Podman" name="Test Dots Podman Update workload with invalid agent name" time="1.029">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Update Workload Podman" name="Test Dots Podman Update workload with missing api version" time="1.033">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that dotctl cli updates workloads correctly&#10;by adapting the portmapping from the host port 8081 to host port 8082."/>
+</properties>
+</testsuite>
+<testsuite name="Workload Configs Podman" tests="5" errors="0" failures="0" skipped="0" time="4.790" timestamp="2025-07-16T15:38:24.449725">
+<testcase classname="Tests.Stests.Workloads.Workload Configs Podman" name="Test Dots start up with templated Dots manifest and update state with updated config item" time="1.643">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Workload Configs Podman" name="Test Dots update configs with invalid config item key" time="0.849">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Workload Configs Podman" name="Test Dots update workload with invalid config alias" time="0.848">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Workload Configs Podman" name="Test Dots update workload with invalid config reference key" time="0.845">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Workload Configs Podman" name="Test Dots start up fails with invalid templated Dots manifest" time="0.600">
+</testcase>
+<properties>
+<property name="Documentation" value="Test of different cases related to workloads and their rendered configuration."/>
+</properties>
+</testsuite>
+<testsuite name="Workload Files" tests="4" errors="0" failures="0" skipped="0" time="10.277" timestamp="2025-07-16T15:38:29.240221">
+<testcase classname="Tests.Stests.Workloads.Workload Files" name="Test Dots starts manifest with workload files assigned to workloads" time="1.644">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Workload Files" name="Test Dots updates a workload upon update of its workload file content" time="2.023">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Workload Files" name="Test Dots updates a workload upon adding additional workload files" time="5.521">
+</testcase>
+<testcase classname="Tests.Stests.Workloads.Workload Files" name="Test Dots rejects unsupported workload files for workloads using podman-kube runtime" time="1.085">
+</testcase>
+<properties>
+<property name="Documentation" value="Tests to verify that Dots creates and mounts workload files&#10;assigned to workloads."/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+</testsuite>

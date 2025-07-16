@@ -1,0 +1,10 @@
+[2025-07-16T15:37:50Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:37:50Z DEBUG dotops] Starting the Dots dotops with 
+    	dotops address: '127.0.0.1:25551', 
+    	startup manifest path: '/__w/dot/dot/tests/resources/configs/state_with_dependency_cycle.yaml'
+[2025-07-16T15:37:50Z WARN  grpc::server] !!!DOTOPS IS STARTED IN INSECURE MODE (-k, --insecure) -> TLS is disabled!!!
+[2025-07-16T15:37:50Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'workload_A' as no config is assigned to the workload
+[2025-07-16T15:37:50Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'workload_C' as no config is assigned to the workload
+[2025-07-16T15:37:50Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'workload_B' as no config is assigned to the workload
+[2025-07-16T15:37:50Z DEBUG dotops::dots_server::cycle_check] workload 'workload_A' is part of a cycle.
+[2025-07-16T15:37:50Z ERROR] dotops error: 'workload dependency 'workload_A' is part of a cycle.'

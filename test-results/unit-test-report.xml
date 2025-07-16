@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="dots" tests="751" failures="0" errors="0" uuid="397c93a9-a9dc-4fb3-84fb-bec14e93ce3f" timestamp="2025-07-16T15:36:54.720+00:00" time="6.094">
+    <testsuite name="grpc::grpc_test" tests="3" disabled="0" errors="0" failures="0">
+        <testcase name="grpc_tests::itest_grpc_communication_client_agent_connection_grpc_server_received_agent_hello" classname="grpc::grpc_test" timestamp="2025-07-16T15:37:00.793+00:00" time="0.012">
+        </testcase>
+        <testcase name="grpc_tests::itest_grpc_communication_client_cli_connection_grpc_server_received_request_complete_state" classname="grpc::grpc_test" timestamp="2025-07-16T15:37:00.793+00:00" time="0.013">
+        </testcase>
+        <testcase name="grpc_tests::itest_grpc_communication_client_cli_connection_grpc_server_received_update_state" classname="grpc::grpc_test" timestamp="2025-07-16T15:37:00.805+00:00" time="0.009">
+        </testcase>
+    </testsuite>
+    <testsuite name="dotctl::bin/dotctl" tests="107" disabled="0" errors="0" failures="0">
+        <testcase name="cli::tests::utest_completions_object_field_mask_invalid_input" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.913+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli::tests::utest_completions_object_field_mask" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.913+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli::tests::utest_completions_object_field_mask_with_current" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.917+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli::tests::utest_completions_workloads" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.919+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli::tests::utest_completions_workloads_invalid_input" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.922+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli::tests::utest_completions_workloads_with_current" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.924+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_apply_manifest_invalid_names" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.927+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_apply_manifests_delete_mode_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.928+00:00" time="0.007">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_apply_manifests_nothing_to_update_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.932+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_apply_manifests_only_configs_to_update_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.935+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_apply_manifests_workloads_updated_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.937+00:00" time="0.007">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_create_filter_masks_from_paths_unique_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.940+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_generate_state_obj_and_filter_masks_from_manifests_delete_mode_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.944+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_generate_state_obj_and_filter_masks_from_manifests_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.945+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_handle_agent_overwrite_agent_name_provided_through_agent_flag" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.949+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_handle_agent_overwrite_considers_only_workloads" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.951+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_handle_agent_overwrite_missing_agent_name" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.955+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_handle_agent_overwrite_multiple_agent_names_provided_in_workload_specs" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.957+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_handle_agent_overwrite_no_agent_name_provided_at_all" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.960+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_handle_agent_overwrite_one_agent_name_provided_in_workload_specs" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.961+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_parse_manifest_invalid_api_version" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.966+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_parse_manifest_invalid_manifest_content" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.967+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_update_request_obj_delete_mode_on_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.971+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_parse_manifest_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.971+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_update_request_obj_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.976+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::apply_manifests::tests::utest_update_request_obj_failed_same_workload_names" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.976+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::cli_table::tests::utest_create_default_table_truncated_table_upon_exceeding_line_length" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.981+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::cli_table::tests::utest_create_default_table_line_length_equal_to_terminal_length" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.981+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::cli_table::tests::utest_table_with_truncated_column_to_remaining_terminal_width" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.986+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::cli_table::tests::utest_default_table_with_only_one_column" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.986+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::cli_table::tests::utest_table_with_wrapped_column_to_remaining_terminal_width" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.990+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::cli_table::tests::utest_terminal_width_for_column_column_name_bigger_than_column_content" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.991+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::cli_table::tests::utest_terminal_width_for_column_no_reasonable_terminal_width_left" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.995+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::cli_table::tests::utest_terminal_width_for_column_no_table_entries" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.996+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::delete_configs::tests::utest_delete_configs_two_configs" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:56.999+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::delete_configs::tests::utest_delete_configs_unknown_config" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.001+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::delete_workloads::tests::utest_delete_workloads_two_workloads" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.004+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::delete_workloads::tests::utest_delete_workloads_unknown_workload" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.006+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_agents::tests::test_get_agents" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.010+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_agents::tests::test_get_agents_agent_not_inside_complete_state_not_listed" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.011+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::get_agents::tests::test_get_agents_count_the_workload_states" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.015+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_agents::tests::test_get_agents_empty_workloads_in_complete_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.018+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_agents::tests::test_get_agents_failed_to_get_complete_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.021+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::get_agents::tests::test_get_agents_no_output_of_empty_agents" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.023+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_configs::tests::test_get_configs_failed_to_get_complete_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.028+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::get_configs::tests::test_get_configs" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.026+00:00" time="0.007">
+        </testcase>
+        <testcase name="cli_commands::get_configs::tests::test_get_configs_no_config_present_in_complete_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.032+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_state::tests::utest_get_state_complete_desired_state_json" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.033+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::get_state::tests::utest_get_state_complete_desired_state_yaml" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.036+00:00" time="0.008">
+        </testcase>
+        <testcase name="cli_commands::get_state::tests::utest_get_state_multiple_fields_of_desired_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.039+00:00" time="0.007">
+        </testcase>
+        <testcase name="cli_commands::get_state::tests::utest_get_state_single_field_of_desired_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.045+00:00" time="0.007">
+        </testcase>
+        <testcase name="cli_commands::get_state::tests::utest_get_state_single_field_without_api_version" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.047+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::get_workloads::tests::utest_get_workloads_deleted_workload" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.051+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::get_workloads::tests::utest_get_workloads_empty_table" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.053+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_workloads::tests::utest_get_workloads_filter_agent" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.057+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::get_workloads::tests::utest_get_workloads_filter_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.058+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_workloads::tests::utest_get_workloads_no_filtering" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.063+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::get_workloads::tests::utest_get_workloads_filter_workload_name" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.063+00:00" time="0.007">
+        </testcase>
+        <testcase name="cli_commands::run_workload::tests::utest_run_workload_one_new_workload" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.068+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_get_complete_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.069+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_get_complete_state_fails_at_request" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.074+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_get_complete_state_fails_no_response" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.076+00:00" time="0.006">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_get_complete_state_other_message_in_between" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.081+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_get_complete_state_other_response_in_between" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.086+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_read_next_update_workload_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.089+00:00" time="0.003">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_read_next_update_workload_state_fails_no_response" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.093+00:00" time="0.003">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_read_next_update_workload_state_other_message_in_between" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.096+00:00" time="0.003">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_update_state" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.100+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_update_state_fails_at_request" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.104+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_update_state_fails_error_response" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.107+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_update_state_fails_no_response" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.111+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_get_complete_state_fails_response_timeout" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.078+00:00" time="3.006">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_update_state_other_message_in_between" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.085+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_update_state_other_response_in_between" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.089+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::set_state::tests::utest_create_state_with_default_workload_specs_empty_update_mask" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.093+00:00" time="0.003">
+        </testcase>
+        <testcase name="cli_commands::set_state::tests::utest_create_state_with_default_workload_specs_invalid_path" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.097+00:00" time="0.003">
+        </testcase>
+        <testcase name="cli_commands::set_state::tests::utest_create_state_with_default_workload_specs_with_update_mask" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.100+00:00" time="0.003">
+        </testcase>
+        <testcase name="cli_commands::set_state::tests::utest_overwrite_using_field_mask" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.103+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::set_state::tests::utest_process_inputs_file" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.107+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::set_state::tests::utest_process_inputs_invalid_yaml" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.112+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::server_connection::tests::utest_update_state_fails_response_timeout" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:36:57.114+00:00" time="3.005">
+        </testcase>
+        <testcase name="cli_commands::set_state::tests::utest_process_inputs_stdin" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.117+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::set_state::tests::utest_set_state_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.120+00:00" time="0.007">
+        </testcase>
+        <testcase name="cli_commands::tests::utest_apply_args_get_input_sources_manifest_files_error" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.122+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::tests::utest_apply_args_get_input_sources_manifest_files_ok" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.126+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::tests::utest_apply_args_get_input_sources_valid_manifest_stdin" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.127+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::wait_list::tests::utest_update_wait_list_added_failed" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.131+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::wait_list::tests::utest_update_wait_list_added_not_scheduled" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.132+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::wait_list::tests::utest_update_wait_list_added_running" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.136+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::wait_list::tests::utest_update_wait_list_added_starting_failed_no_more_retries" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.137+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::wait_list::tests::utest_update_wait_list_deleted_removed" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.141+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::wait_list::tests::utest_update_wait_list_added_succeeded" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.141+00:00" time="0.005">
+        </testcase>
+        <testcase name="cli_commands::workload_table_row::tests::utest_additional_info_msg_without_new_lines" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.146+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::wait_list_display::tests::update_table" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.146+00:00" time="0.005">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_default_dotctl_config" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.151+00:00" time="0.004">
+        </testcase>
+        <testcase name="cli_commands::workload_table_row::tests::utest_one_row_table" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.150+00:00" time="0.005">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_dotctl_config_conflicting_certificates" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.155+00:00" time="0.005">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_dotctl_config_from_file_successful" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.155+00:00" time="0.006">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_dotctl_config_multiple_contexts_found" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.160+00:00" time="0.005">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_dotctl_config_no_context_returns_default" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.161+00:00" time="0.005">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_dotctl_config_update_with_args" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.165+00:00" time="0.004">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_dotctl_config_update_with_args_certificates_content" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.165+00:00" time="0.005">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_dotctl_config_update_with_args_flags_unset" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.169+00:00" time="0.005">
+        </testcase>
+        <testcase name="dotctl_config::tests::utest_dotctl_config_wrong_version" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.171+00:00" time="0.005">
+        </testcase>
+        <testcase name="tests::utest_handle_dotctl_config_default" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.174+00:00" time="0.005">
+        </testcase>
+        <testcase name="tests::utest_handle_dotctl_config_default_path" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.175+00:00" time="0.005">
+        </testcase>
+        <testcase name="tests::utest_handle_dotctl_config_valid_config" classname="dotctl::bin/dotctl" timestamp="2025-07-16T15:37:00.179+00:00" time="0.005">
+        </testcase>
+    </testsuite>
+    <testsuite name="dot::bin/dot" tests="382" disabled="0" errors="0" failures="0">
+        <testcase name="agent_config::tests::utest_agent_config_conflicting_certificates" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.057+00:00" time="0.006">
+        </testcase>
+        <testcase name="agent_config::tests::utest_agent_config_from_file_successful" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.059+00:00" time="0.005">
+        </testcase>
+        <testcase name="agent_config::tests::utest_agent_config_update_with_args" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.063+00:00" time="0.005">
+        </testcase>
+        <testcase name="agent_config::tests::utest_agent_config_update_with_args_certificates_content" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.065+00:00" time="0.006">
+        </testcase>
+        <testcase name="agent_config::tests::utest_agent_config_wrong_version" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.068+00:00" time="0.006">
+        </testcase>
+        <testcase name="agent_config::tests::utest_default_agent_config" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.071+00:00" time="0.004">
+        </testcase>
+        <testcase name="agent_manager::tests::utest_agent_manager_forwards_complete_state" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.074+00:00" time="0.007">
+        </testcase>
+        <testcase name="agent_manager::tests::utest_agent_manager_no_update_on_empty_workload_states" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.075+00:00" time="0.006">
+        </testcase>
+        <testcase name="agent_manager::tests::utest_agent_manager_receives_own_workload_states" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.081+00:00" time="0.006">
+        </testcase>
+        <testcase name="agent_manager::tests::utest_agent_manager_sends_available_resources" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.081+00:00" time="0.008">
+        </testcase>
+        <testcase name="agent_manager::tests::utest_agent_manager_update_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.087+00:00" time="0.008">
+        </testcase>
+        <testcase name="agent_manager::tests::utest_agent_manager_update_workload_states" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.090+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::authorizer::path::tests::utest_from_empty_str" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.095+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path::tests::utest_from_str" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.096+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path::tests::utest_to_str" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.100+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_allow_path_pattern" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.101+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_allow_path_pattern_sections" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.105+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_allow_path_pattern_with_wildcard" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.106+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_allow_path_pattern_with_wildcard_only" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.111+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_deny_path_pattern" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.112+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_deny_path_pattern_sections" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.115+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_deny_path_pattern_with_wildcard" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.117+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_deny_path_pattern_with_wildcard_only" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.121+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_empty_allow_path_pattern_does_not_match" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.122+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_empty_deny_path_pattern_does_not_match" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.126+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_empty_vec_path_pattern" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.127+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_matches_none_in_vec_path_pattern" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.132+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::path_pattern::tests::utest_matches_one_in_vec_path_pattern" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.132+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::authorizer::rule::test::utest_empty_rule" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.137+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::rule::test::utest_matches_none_pattern_in_rule" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.138+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::rule::test::utest_matches_on_pattern_in_rule" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.142+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::test::utest_allow_empty_request" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.143+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::authorizer::test::utest_authorizer_from_control_interface_access" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.148+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::test::utest_denies_empty_request" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.149+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::authorizer::test::utest_matches_all_filter_entries" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.152+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::test::utest_matches_not_all_filter_entries" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.154+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::authorizer::test::utest_read_requests_operations" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.157+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::authorizer::test::utest_write_requests_operations" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.160+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::control_interface_info::tests::utest_get_run_folder" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.162+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::control_interface_info::tests::utest_get_to_server_sender" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.166+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::control_interface_info::tests::utest_has_same_configuration_true" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.167+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::control_interface_info::tests::utest_has_same_configuration_with_different_authorizer_returns_false" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.172+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::control_interface_info::tests::utest_has_same_configuration_with_different_location_returns_false" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.173+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::control_interface_info::tests::utest_new" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.177+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::control_interface_task::tests::utest_control_interface_task_forward_from_server" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.179+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::control_interface_task::tests::utest_control_interface_task_run_task_access_allowed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.182+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::control_interface_task::tests::utest_control_interface_task_run_task_access_denied" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.185+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::control_interface_task::tests::utest_control_interface_task_run_task_hello_unsupported_version" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.189+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::control_interface_task::tests::utest_control_interface_task_run_task_no_hello" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.192+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::fifo::tests::utest_fifo_drop_remove_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.196+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::fifo::tests::utest_fifo_get_path" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.198+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::fifo::tests::utest_fifo_new_create_and_remove_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.201+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::fifo::tests::utest_fifo_new_create_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.204+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::fifo::tests::utest_fifo_reuse_existing_and_remove_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.206+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::from_server_channels::tests::utest_from_server_channels_new" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.209+00:00" time="0.005">
+        </testcase>
+        <testcase name="control_interface::input_output::tests::utest_input_output_new_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.212+00:00" time="0.006">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_read_cannot_open" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.214+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_read_cannot_read" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.218+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_read_empty" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.221+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_read_with_1byte_varint" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.225+00:00" time="0.008">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_read_with_2byte_varint" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.228+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_read_with_incorrect_varint" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.233+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_read_with_too_less_data" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.235+00:00" time="0.057">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_read_with_too_less_varint" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.240+00:00" time="0.056">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_write_cannot_open" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.293+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_write_empty" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.296+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::reopen_file::tests::test_write_reopen" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.299+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::tests::utest_control_interface_get_api_location_returns_valid_location" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.303+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::tests::utest_get_input_pipe_sender_returns_valid_sender" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.307+00:00" time="0.007">
+        </testcase>
+        <testcase name="control_interface::to_dots::tests::utest_convert_control_interface_proto_to_dots_object" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.311+00:00" time="0.006">
+        </testcase>
+        <testcase name="io_utils::dir_utils::tests::utest_arguments_prepare_agent_run_directory_given_directory_not_found" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.316+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::dir_utils::tests::utest_arguments_prepare_agent_run_directory_use_default_directory_create" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.321+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::dir_utils::tests::utest_arguments_prepare_agent_run_directory_use_default_directory_create_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.325+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::dir_utils::tests::utest_arguments_prepare_agent_run_directory_use_default_directory_create_permissions_fail" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.328+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::dir_utils::tests::utest_arguments_prepare_agent_run_directory_use_default_directory_exists" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.333+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::directory::tests::utest_directory_new_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.337+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::directory::tests::utest_directory_new_ok_and_get_path_valid" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.341+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::directory::tests::utest_directory_new_remove_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.344+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_is_fifo_nok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.348+00:00" time="0.003">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_is_fifo_ok_false" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.351+00:00" time="0.003">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_is_fifo_ok_true" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.355+00:00" time="0.003">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_make_dir_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.358+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_make_dir_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.362+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_make_fifo_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.365+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_make_fifo_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.369+00:00" time="0.003">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_remove_dir_async_fails_with_generic_reason" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.373+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_remove_dir_async_fails_with_path_not_found" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.376+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_remove_dir_async_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.380+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_remove_dir_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.384+00:00" time="0.003">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_remove_dir_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.387+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_remove_fifo_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.390+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_filesystem_remove_fifo_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.394+00:00" time="0.003">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_set_permissions_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.397+00:00" time="0.003">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_set_permissions_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.401+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_write_file_async_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.404+00:00" time="0.004">
+        </testcase>
+        <testcase name="io_utils::fs::tests::utest_write_file_async_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.408+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::cli_command::tests::utest_cli_command_fail_on_not_existing_command" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.412+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_connectors::cli_command::tests::utest_cli_command_on_fail_only_forward_stderr" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.417+00:00" time="0.012">
+        </testcase>
+        <testcase name="runtime_connectors::cli_command::tests::utest_cli_command_only_forward_stdout" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.429+00:00" time="0.006">
+        </testcase>
+        <testcase name="runtime_connectors::cli_command::tests::utest_cli_command_simple_input_output" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.436+00:00" time="0.006">
+        </testcase>
+        <testcase name="runtime_connectors::cli_command::tests::utest_cli_command_simple_output" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.441+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_connectors::cli_command::tests::utest_cli_command_simple_output_multiple_args" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.447+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_connectors::cli_command::tests::utest_cli_command_stderr_not_utf8" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.451+00:00" time="0.007">
+        </testcase>
+        <testcase name="runtime_connectors::cli_command::tests::utest_cli_command_stdout_not_utf8" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.458+00:00" time="0.006">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_create_workload_parsing_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.464+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_create_workload_run_failed_cleanup_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.468+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_create_workload_run_failed_cleanup_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.472+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_create_workload_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.476+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_create_workload_with_existing_workload_id_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.480+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_delete_workload_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.485+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_delete_workload_succeeds" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.488+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_reusable_running_workloads_empty_list" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.492+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_reusable_running_workloads_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.496+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_reusable_workloads_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.500+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_state_returns_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.503+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_state_returns_lost_on_missing_state" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.507+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_state_returns_state" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.511+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_workload_id_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.514+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_workload_id_no_workload_found" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.518+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_get_workload_id_workload_found" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.522+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_name_podman" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.526+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_state_getter_resets_cache" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.529+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime::tests::utest_state_getter_uses_podman_cli" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.534+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime_config::tests::utest_podman_config_failure_missing_image" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.538+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime_config::tests::utest_podman_config_failure_wrong_runtime" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.542+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime_config::tests::utest_podman_config_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.545+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman::podman_runtime_config::tests::utest_podman_config_to_podman_run_config" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.548+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_configured" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.552+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_created" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.555+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_exited" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.558+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_initialized" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.561+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_paused" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.565+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_removing" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.568+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_running" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.571+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_stopped" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.574+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_stopping" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.578+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_undefined" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.581+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_container_state_from_podman_container_info_unknown" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.585+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_down_kube_fail" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.588+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_down_kube_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.592+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_broken_response_retry_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.596+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_broken_response_retry_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.601+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_configured" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.605+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_created" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.609+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.613+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_initialized" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.617+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_podman_error_retry_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.621+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_podman_error_retry_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.625+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_podman_existing_ps_result_to_old" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.629+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_podman_use_existing_ps_result" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.633+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_removing" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.637+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_running" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.641+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_stopped" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.645+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_stopping" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.649+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_succeeded" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.653+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_undefined" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.657+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_by_id_unknown" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.661+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_from_pods_command_fails_retry_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.665+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_from_pods_command_fails_retry_succeeds" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.669+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_from_pods_empty_input" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.674+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_from_pods_result_not_json_retry_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.678+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_from_pods_result_not_json_retry_succeeds" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.682+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_from_pods_some_missing_leads_to_unknown" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.686+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_from_pods_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.690+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_states_uses_cache" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.694+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_volumes_by_name_command_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.698+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_volumes_by_name_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.702+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_workload_ids_broken_response" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.706+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_workload_ids_fail" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.710+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_workload_ids_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.714+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_workload_names_broken_response" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.718+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_workload_names_not_found_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.722+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_workload_names_podman_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.725+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_list_workload_names_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.729+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_play_kube_fail" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.733+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_play_kube_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.737+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_read_data_from_volume_command_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.740+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_read_data_from_volume_command_returns_illegal_json" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.744+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_read_data_from_volume_command_returns_no_volume" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.748+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_read_data_from_volume_data_contains_illegal_base64" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.752+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_read_data_from_volume_data_contains_illegal_utf8" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.755+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_read_data_from_volume_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.760+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_remove_volume_command_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.764+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_remove_volume_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.768+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_remove_workloads_by_id_remove_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.772+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_remove_workloads_by_id_stop_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.775+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_remove_workloads_by_id_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.779+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_run_container_fail_no_options" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.783+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_run_container_success_no_options" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.787+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_run_container_success_with_options" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.791+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_start_container_fail" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.795+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_start_container_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.799+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_store_data_as_volume_success_volume_did_not_exist_before" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.803+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_cli::tests::utest_store_data_as_volume_success_volume_existed_before" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.806+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_create_workload_command_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.810+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_create_workload_handle_cant_store_config" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.815+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_create_workload_handle_cant_store_pods" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.819+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_create_workload_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.823+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_create_workload_unsupported_workload_files_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.827+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_delete_workload_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.831+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_delete_workload_handles_remove_volume_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.835+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_delete_workload_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.839+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_reusable_running_workloads_request_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.843+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_reusable_workloads_handles_to_short_volume_name" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.847+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_reusable_workloads_one_volume_cant_be_parsed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.851+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_reusable_workloads_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.855+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.860+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_removed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.864+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_running" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.868+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_starting" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.872+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_succeeded" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.876+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_unknown" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.880+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_unknown_as_command_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.884+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_unknown_as_pods_unknown" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.888+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_state_unknown_from_paused" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.892+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_workload_id_could_not_parse_config" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.895+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_workload_id_could_not_parse_pods" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.899+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_workload_id_could_not_read_config" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.904+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_workload_id_could_not_read_pods" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.907+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_get_workload_id_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.912+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_name_podman_kube" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.916+00:00" time="0.003">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime::tests::utest_state_getter_resets_cache" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.919+00:00" time="0.006">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime_config::tests::utest_podman_kube_config_failure_missing_manifest" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.925+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime_config::tests::utest_podman_kube_config_failure_unsupported_files_field" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.929+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime_config::tests::utest_podman_kube_config_failure_wrong_runtime" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.932+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::podman_kube::podman_kube_runtime_config::tests::utest_podman_kube_config_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.936+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::runtime_facade::tests::utest_runtime_facade_create_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.940+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::runtime_facade::tests::utest_runtime_facade_delete_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.944+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::runtime_facade::tests::utest_runtime_facade_delete_workload_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.948+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::runtime_facade::tests::utest_runtime_facade_resume_workload_with_control_interface_access" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.952+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::runtime_facade::tests::utest_runtime_facade_resume_workload_without_control_interface_access" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.956+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_connectors::runtime_facade::tests::utest_runtime_facade_reusable_running_workloads" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.961+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_add_workload_test_control_interface_creation" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.964+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_delete_workload_on_already_removed_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.968+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_execute_workload_operations_create" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.972+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_execute_workload_operations_delete" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.976+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_execute_workload_operations_update" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.980+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_execute_workload_operations_update_delete_only" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.984+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_forward_complete_state" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.988+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_forward_complete_state_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.992+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_forward_complete_state_not_called_because_workload_not_found" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.996+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_initial_call_add_workload_with_unfulfilled_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.000+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_initial_call_delete_unneeded_after_agent_restart" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.004+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_initial_call_delete_unneeded_after_server_restart" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.009+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_initial_call_failed_to_get_reusable_workloads" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.013+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_initial_call_handle" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.018+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_initial_call_replace_workload_with_unfulfilled_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.022+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_no_workload_with_unknown_runtime" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.027+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_subsequent_add_new_workloads" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.031+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_subsequent_add_on_update_missing" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.036+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_subsequent_add_workload_with_not_fulfilled_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.040+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_subsequent_delete_before_adding" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.044+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_subsequent_deleted_workload_with_not_fulfilled_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.049+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_subsequent_update_delete_only_with_fulfilled_delete_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.053+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_subsequent_update_known_added" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.058+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_handle_update_workload_subsequent_update_on_add_and_delete" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.063+00:00" time="0.005">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_replace_existing_not_running_workload_after_agent_restart" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.068+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_replace_existing_not_running_workload_after_server_restart" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.072+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_replace_existing_workload_with_different_config" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.076+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_resume_existing_running_workload_with_equal_config" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.080+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_reuse_existing_succeeded_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.084+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_transform_update_state_message_into_workload_operations_create" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.089+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_transform_update_state_message_into_workload_operations_delete" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.093+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_transform_update_state_message_into_workload_operations_update" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.097+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_update_workload_state_create_workload_with_fulfilled_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.101+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_update_workload_state_delete_workload_dependencies_not_fulfilled" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.105+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_update_workload_state_delete_workload_dependencies_with_fulfilled_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.109+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_update_workload_state_no_create_workload_when_dependencies_not_fulfilled" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.113+00:00" time="0.004">
+        </testcase>
+        <testcase name="runtime_manager::tests::utest_update_workload_test_control_interface_creation" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.117+00:00" time="0.004">
+        </testcase>
+        <testcase name="tests::utest_handle_agent_config_default" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.121+00:00" time="0.003">
+        </testcase>
+        <testcase name="tests::utest_handle_agent_config_default_path" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.124+00:00" time="0.004">
+        </testcase>
+        <testcase name="tests::utest_handle_agent_config_valid_config" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.128+00:00" time="0.004">
+        </testcase>
+        <testcase name="tests::utest_validate_agent_name_fail" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.131+00:00" time="0.005">
+        </testcase>
+        <testcase name="tests::utest_validate_agent_name_ok" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.136+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::control_loop_state::tests::utest_control_loop_state_builder_build_failed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.140+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::control_loop_state::tests::utest_control_loop_state_builder_build_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.143+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::control_loop_state::tests::utest_control_loop_state_instance_name" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.147+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::retry_manager::tests::utest_invalidate_invalidates_token" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.151+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::retry_manager::tests::utest_invalidate_stops_retry" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.154+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::retry_manager::tests::utest_max_retry_time" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.158+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::retry_manager::tests::utest_new_toke_resets_timeout" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.161+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::retry_manager::tests::utest_new_token_invalidates_old_token" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.165+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::retry_manager::tests::utest_new_token_stops_retry" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.168+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::retry_manager::tests::utest_one_retry" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.172+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_exchange_control_interface_not_created" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.176+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_is_control_interface_changed_returns_false" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.180+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_is_control_interface_changed_returns_true" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.184+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_is_control_interface_changed_set_from_existing_to_none_returns_true" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.187+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::tests::utest_is_control_interface_changed_set_from_none_to_new_returns_true" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.191+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::tests::utest_is_control_interface_changed_set_from_none_to_none_returns_false" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.194+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::tests::utest_workload_obj_delete_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.197+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_workload_obj_delete_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.202+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_workload_obj_send_complete_state_no_control_interface" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.205+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_workload_obj_send_complete_state_pipes_communication_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.209+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_workload_obj_send_complete_state_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.213+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_workload_obj_update_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.217+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::tests::utest_workload_obj_update_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.221+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_command_channel::tests::utest_send_create" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.225+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_command_channel::tests::utest_send_delete" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.229+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_command_channel::tests::utest_send_resume" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.233+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_command_channel::tests::utest_send_resume_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.236+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_command_channel::tests::utest_send_retry" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.240+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_command_channel::tests::utest_send_update" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.243+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_create_workload_on_runtime_create_workload_files" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.247+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_create_workload_on_runtime_create_workload_files_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.251+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_create_workload_on_runtime_runtime_fails_with_unsupported_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.255+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_forward_received_workload_states_of_state_checker" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.259+00:00" time="0.076">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_is_restart_allowed_never" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.335+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_is_restart_allowed_on_failure" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.338+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_is_same_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.342+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_panic_on_closed_workload_state_channel" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.346+00:00" time="0.076">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_restart_policy_matches_execution_state_always" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.421+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_restart_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.425+00:00" time="0.076">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_resume_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.501+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_resume_workload_get_workload_id_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.506+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_resume_workload_start_state_checker_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.510+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_resume_workload_workload_id_and_state_checker_updated" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.514+00:00" time="0.004">
+        </testcase>
+        <testcase name="generic_polling_state_checker::tests::utest_generic_polling_state_checker_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:55.313+00:00" time="1.207">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_create_successful" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.520+00:00" time="0.057">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_delete_already_gone" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.576+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_delete_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.581+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_create_failed_sends_retry" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.518+00:00" time="0.107">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_retry_failed_sends_retry" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.585+00:00" time="0.106">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_retry_skip_if_retry_token_invalid" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.625+00:00" time="0.106">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_update_after_update_delete_only" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.731+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_update_broken_allowed" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.736+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_update_delete_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.740+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_update_delete_only" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.744+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_update_success" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.748+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_update_create_failed_send_retry" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.752+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_files::workload_files_creator::tests::utest_host_workload_file_location_try_from_fails_invalid_path_components" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.757+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload_files::workload_files_creator::tests::utest_host_workload_file_location_try_from_fails_with_directory_instead_of_file" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.760+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload_files::workload_files_creator::tests::utest_host_workload_file_location_try_from_fails_with_relative_path" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.764+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload_files::workload_files_creator::tests::utest_workload_files_creator_create_files" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.767+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload_files::workload_files_creator::tests::utest_workload_files_creator_create_files_create_dir_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.771+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload_files::workload_files_creator::tests::utest_workload_files_creator_create_files_fails_with_invalid_path_components" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.775+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload_files::workload_files_creator::tests::utest_workload_files_creator_create_files_write_file_fails" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.779+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload_files::workload_files_creator::tests::utest_workload_files_creator_write_file_base64_decode_error" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.783+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload_files::workload_files_path::tests::utest_workload_files_path_from" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.787+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload_scheduler::dependency_state_validator::tests::utest_create_fulfilled" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.790+00:00" time="0.003">
+        </testcase>
+        <testcase name="workload_scheduler::dependency_state_validator::tests::utest_create_fulfilled_no_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.793+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload::workload_control_loop::tests::utest_workload_obj_run_retry_successful" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.691+00:00" time="0.107">
+        </testcase>
+        <testcase name="workload_scheduler::dependency_state_validator::tests::utest_create_fulfilled_no_workload_state_known" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.797+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_scheduler::dependency_state_validator::tests::utest_create_fulfilled_unfulfilled_execution_state" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.798+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_scheduler::dependency_state_validator::tests::utest_delete_fulfilled_no_dependencies" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.803+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_scheduler::dependency_state_validator::tests::utest_delete_fulfilled" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.802+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::dependency_state_validator::tests::utest_delete_fulfilled_no_workload_state_known" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.807+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_scheduler::dependency_state_validator::tests::utest_delete_fulfilled_unfulfilled_execution_state" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.808+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_enqueue_and_report_workload_state_for_pending_create" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.812+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_enqueue_and_report_workload_state_for_pending_delete" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.814+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_enqueue_and_report_workload_state_for_pending_update_at_most_once" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.818+00:00" time="0.007">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_enqueue_and_report_workload_state_for_pending_update_create_at_most_once" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.819+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_enqueue_and_report_workload_state_for_pending_update_delete_at_most_once" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.825+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_enqueue_filtered_workload_operations_get_next_ready_workload_operations" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.826+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_enqueue_filtered_workload_operations_ignore_update_delete_only_workload_operations" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.830+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_immediate_delete_for_pending_update_create_at_most_once" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.832+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_enqueue_pending_update_create_on_delete_fulfilled_update" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.836+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_keep_pending_create_in_queue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.837+00:00" time="0.007">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_keep_pending_delete_in_queue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.843+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_keep_pending_update_create_in_queue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.844+00:00" time="0.007">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_keep_pending_update_in_queue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.848+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_no_report_pending_create_on_pending_update_create_reenqueue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.851+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_no_report_pending_create_on_reenqueue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.855+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_no_report_pending_delete_on_pending_update_reenqueue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.857+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_no_report_pending_delete_on_reenqueue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.860+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_remove_ready_create_from_queue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.863+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_remove_ready_delete_from_queue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.867+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_remove_ready_update_create_at_most_once_from_queue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.869+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_remove_ready_update_delete_at_most_once_from_queue" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.873+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_next_workload_operations_report_pending_create_on_delete_fulfilled_update" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.875+00:00" time="0.007">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_no_enqueue_and_report_for_ready_create" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.879+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_no_enqueue_and_report_pending_state_on_fulfilled_update_at_most_once" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.882+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_no_enqueue_and_report_workload_state_for_ready_delete" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.885+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_report_pending_create_state_closed_receiver" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.887+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_scheduler::scheduler::tests::utest_report_pending_delete_state_closed_receiver" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.891+00:00" time="0.007">
+        </testcase>
+        <testcase name="workload_state::workload_state_sender::tests::utest_workload_state_sender_interface_report" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.893+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_state::workload_state_store::tests::utest_get_state_of_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.898+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload_state::workload_state_store::tests::utest_get_state_of_workload_not_existing_workload" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.899+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_state::workload_state_store::tests::utest_update_storage_add_multiple_records" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.902+00:00" time="0.006">
+        </testcase>
+        <testcase name="workload_state::workload_state_store::tests::utest_update_storage_empty_storage_add_one" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.904+00:00" time="0.005">
+        </testcase>
+        <testcase name="workload_state::workload_state_store::tests::utest_update_storage_update_record" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.909+00:00" time="0.004">
+        </testcase>
+        <testcase name="workload_state::workload_state_store::tests::utest_update_storage_removed_gets_state_deleted" classname="dot::bin/dot" timestamp="2025-07-16T15:36:56.908+00:00" time="0.006">
+        </testcase>
+    </testsuite>
+    <testsuite name="grpc" tests="42" disabled="0" errors="0" failures="0">
+        <testcase name="from_server_proxy::tests::utest_distribute_workload_states_to_agents_shall_distribute_workload_states_from_other_agents" classname="grpc" timestamp="2025-07-16T15:37:00.688+00:00" time="0.003">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_distribute_workloads_to_agents_shall_distribute_workloads_to_existing_agents" classname="grpc" timestamp="2025-07-16T15:37:00.692+00:00" time="0.003">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_distribute_workloads_to_agents_shall_not_distribute_workloads_to_non_existing_agents" classname="grpc" timestamp="2025-07-16T15:37:00.695+00:00" time="0.004">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_dots_to_proto_complete_state" classname="grpc" timestamp="2025-07-16T15:37:00.699+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_dots_to_proto_update_workload" classname="grpc" timestamp="2025-07-16T15:37:00.699+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_dots_to_proto_update_workload_state" classname="grpc" timestamp="2025-07-16T15:37:00.703+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_proto_to_dots_handles_incorrect_added_workloads" classname="grpc" timestamp="2025-07-16T15:37:00.704+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_proto_to_dots_handles_incorrect_deleted_workloads" classname="grpc" timestamp="2025-07-16T15:37:00.708+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_proto_to_dots_handles_missing_agent_reply" classname="grpc" timestamp="2025-07-16T15:37:00.709+00:00" time="0.007">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_proto_to_dots_response" classname="grpc" timestamp="2025-07-16T15:37:00.713+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_proto_to_dots_update_workload" classname="grpc" timestamp="2025-07-16T15:37:00.716+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_proxy::tests::utest_from_server_proxy_forward_from_proto_to_dots_update_workload_state" classname="grpc" timestamp="2025-07-16T15:37:00.717+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_from_server_to_proto_complete_state" classname="grpc" timestamp="2025-07-16T15:37:00.721+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_from_server_to_proto_update_workload" classname="grpc" timestamp="2025-07-16T15:37:00.722+00:00" time="0.005">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_from_server_to_proto_update_workload_state" classname="grpc" timestamp="2025-07-16T15:37:00.725+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_proto_to_server_agent_hello" classname="grpc" timestamp="2025-07-16T15:37:00.726+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_proto_to_server_agent_resource" classname="grpc" timestamp="2025-07-16T15:37:00.730+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_proto_to_server_request_complete_state" classname="grpc" timestamp="2025-07-16T15:37:00.731+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_proto_to_server_update_state_fails" classname="grpc" timestamp="2025-07-16T15:37:00.735+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_proto_to_server_update_state" classname="grpc" timestamp="2025-07-16T15:37:00.733+00:00" time="0.008">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_convert_proto_to_server_update_workload_state" classname="grpc" timestamp="2025-07-16T15:37:00.739+00:00" time="0.005">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_converts_from_proto_update_workload_state" classname="grpc" timestamp="2025-07-16T15:37:00.741+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_converts_to_dots_added_workload" classname="grpc" timestamp="2025-07-16T15:37:00.745+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_converts_to_dots_added_workload_fails" classname="grpc" timestamp="2025-07-16T15:37:00.745+00:00" time="0.005">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_converts_to_dots_deleted_workload" classname="grpc" timestamp="2025-07-16T15:37:00.749+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_converts_to_dots_deleted_workload_fails" classname="grpc" timestamp="2025-07-16T15:37:00.750+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_converts_to_proto_added_workload" classname="grpc" timestamp="2025-07-16T15:37:00.753+00:00" time="0.005">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_converts_to_proto_deleted_workload" classname="grpc" timestamp="2025-07-16T15:37:00.754+00:00" time="0.004">
+        </testcase>
+        <testcase name="grpc_api::tests::utest_converts_to_proto_update_workload_state" classname="grpc" timestamp="2025-07-16T15:37:00.758+00:00" time="0.004">
+        </testcase>
+        <testcase name="tests::test_read_pem_file_and_check_permissions" classname="grpc" timestamp="2025-07-16T15:37:00.759+00:00" time="0.005">
+        </testcase>
+        <testcase name="tests::utest_read_pem_file" classname="grpc" timestamp="2025-07-16T15:37:00.762+00:00" time="0.004">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_dots_to_proto_agent_resources" classname="grpc" timestamp="2025-07-16T15:37:00.764+00:00" time="0.004">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_dots_to_proto_request_complete_state" classname="grpc" timestamp="2025-07-16T15:37:00.766+00:00" time="0.005">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_dots_to_proto_update_workload" classname="grpc" timestamp="2025-07-16T15:37:00.768+00:00" time="0.005">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_dots_to_proto_update_workload_state" classname="grpc" timestamp="2025-07-16T15:37:00.771+00:00" time="0.005">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_proto_to_dots_agent_resources" classname="grpc" timestamp="2025-07-16T15:37:00.773+00:00" time="0.004">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_proto_to_dots_fail_on_invalid_state" classname="grpc" timestamp="2025-07-16T15:37:00.777+00:00" time="0.005">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_proto_to_dots_handles_missing_to_server" classname="grpc" timestamp="2025-07-16T15:37:00.777+00:00" time="0.005">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_proto_to_dots_ignores_none" classname="grpc" timestamp="2025-07-16T15:37:00.781+00:00" time="0.005">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_proto_to_dots_request_complete_state" classname="grpc" timestamp="2025-07-16T15:37:00.782+00:00" time="0.006">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_proto_to_dots_update_workload" classname="grpc" timestamp="2025-07-16T15:37:00.786+00:00" time="0.006">
+        </testcase>
+        <testcase name="to_server_proxy::tests::utest_to_server_command_forward_from_proto_to_dots_update_workload_state" classname="grpc" timestamp="2025-07-16T15:37:00.789+00:00" time="0.005">
+        </testcase>
+    </testsuite>
+    <testsuite name="common" tests="119" disabled="0" errors="0" failures="0">
+        <testcase name="commands::tests::utest_converts_from_proto_complete_state_request" classname="common" timestamp="2025-07-16T15:36:54.746+00:00" time="0.005">
+        </testcase>
+        <testcase name="commands::tests::utest_converts_from_proto_request_fails_empty_request_content" classname="common" timestamp="2025-07-16T15:36:54.748+00:00" time="0.005">
+        </testcase>
+        <testcase name="commands::tests::utest_converts_from_proto_update_state_request" classname="common" timestamp="2025-07-16T15:36:54.751+00:00" time="0.005">
+        </testcase>
+        <testcase name="commands::tests::utest_converts_from_proto_update_state_request_fails_invalid_current_state" classname="common" timestamp="2025-07-16T15:36:54.753+00:00" time="0.005">
+        </testcase>
+        <testcase name="commands::tests::utest_converts_from_proto_update_state_request_inner_state_with_empty_states" classname="common" timestamp="2025-07-16T15:36:54.756+00:00" time="0.006">
+        </testcase>
+        <testcase name="commands::tests::utest_converts_from_proto_update_state_request_with_empty_states" classname="common" timestamp="2025-07-16T15:36:54.758+00:00" time="0.005">
+        </testcase>
+        <testcase name="commands::tests::utest_request_complete_state_prefix_request_id" classname="common" timestamp="2025-07-16T15:36:54.762+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_interface::tests::utest_to_server_send_complete_state" classname="common" timestamp="2025-07-16T15:36:54.763+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_interface::tests::utest_to_server_send_update_state_success" classname="common" timestamp="2025-07-16T15:36:54.768+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_interface::tests::utest_to_server_send_error" classname="common" timestamp="2025-07-16T15:36:54.767+00:00" time="0.007">
+        </testcase>
+        <testcase name="from_server_interface::tests::utest_to_server_send_update_workload" classname="common" timestamp="2025-07-16T15:36:54.773+00:00" time="0.005">
+        </testcase>
+        <testcase name="from_server_interface::tests::utest_to_server_send_update_workload_state" classname="common" timestamp="2025-07-16T15:36:54.774+00:00" time="0.006">
+        </testcase>
+        <testcase name="helpers::tests::utest_version_compatibility_patch_diff_success" classname="common" timestamp="2025-07-16T15:36:54.779+00:00" time="0.005">
+        </testcase>
+        <testcase name="helpers::tests::utest_version_compatibility_patch_major_error" classname="common" timestamp="2025-07-16T15:36:54.780+00:00" time="0.006">
+        </testcase>
+        <testcase name="helpers::tests::utest_version_compatibility_patch_minor_error" classname="common" timestamp="2025-07-16T15:36:54.784+00:00" time="0.005">
+        </testcase>
+        <testcase name="helpers::tests::utest_version_compatibility_success" classname="common" timestamp="2025-07-16T15:36:54.786+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::agent_name::tests::utest_agent_name_get_filter_regex" classname="common" timestamp="2025-07-16T15:36:54.789+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::agent_name::tests::utest_agent_name_get_filter_suffix" classname="common" timestamp="2025-07-16T15:36:54.790+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::config::tests::convert_from_internal_to_proto" classname="common" timestamp="2025-07-16T15:36:54.795+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::config::tests::convert_from_array_containing_none_to_internal_fails" classname="common" timestamp="2025-07-16T15:36:54.794+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::config::tests::convert_from_none_to_internal_fails" classname="common" timestamp="2025-07-16T15:36:54.799+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::config::tests::convert_from_object_containing_none_to_internal_fails" classname="common" timestamp="2025-07-16T15:36:54.800+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::config::tests::convert_from_proto_to_internal" classname="common" timestamp="2025-07-16T15:36:54.804+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::control_interface_access::tests::utest_access_rights_rule_verify_fails" classname="common" timestamp="2025-07-16T15:36:54.805+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::control_interface_access::tests::utest_access_rights_rule_verify_success" classname="common" timestamp="2025-07-16T15:36:54.808+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::control_interface_access::tests::utest_control_interface_access_verify_fails_on_empty_allow_rule_filter" classname="common" timestamp="2025-07-16T15:36:54.811+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::control_interface_access::tests::utest_control_interface_access_verify_fails_on_empty_deny_rule_filter" classname="common" timestamp="2025-07-16T15:36:54.813+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::control_interface_access::tests::utest_control_interface_access_verify_success" classname="common" timestamp="2025-07-16T15:36:54.816+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::file::tests::utest_convert_binary_file_to_dots" classname="common" timestamp="2025-07-16T15:36:54.817+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::file::tests::utest_convert_binary_file_to_proto" classname="common" timestamp="2025-07-16T15:36:54.821+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::file::tests::utest_convert_proto_file_to_dots_no_file_content_fails" classname="common" timestamp="2025-07-16T15:36:54.822+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::file::tests::utest_convert_text_file_to_proto" classname="common" timestamp="2025-07-16T15:36:54.826+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::file::tests::utest_convert_text_file_to_dots" classname="common" timestamp="2025-07-16T15:36:54.825+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::state::tests::utest_converts_to_proto_state" classname="common" timestamp="2025-07-16T15:36:54.831+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::state::tests::utest_converts_to_dots_state" classname="common" timestamp="2025-07-16T15:36:54.830+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::state::tests::utest_state_accepts_compatible_state" classname="common" timestamp="2025-07-16T15:36:54.836+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::state::tests::utest_serialize_state_into_ordered_output" classname="common" timestamp="2025-07-16T15:36:54.836+00:00" time="0.007">
+        </testcase>
+        <testcase name="objects::state::tests::utest_state_rejects_incompatible_state_on_api_version" classname="common" timestamp="2025-07-16T15:36:54.841+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::state::tests::utest_state_rejects_state_without_api_version" classname="common" timestamp="2025-07-16T15:36:54.843+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::state::tests::utest_verify_configs_format_compatible_config_item_keys_and_config_references" classname="common" timestamp="2025-07-16T15:36:54.845+00:00" time="0.007">
+        </testcase>
+        <testcase name="objects::state::tests::utest_verify_configs_format_incompatible_config_item_key" classname="common" timestamp="2025-07-16T15:36:54.848+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::stored_workload_spec::tests::utest_verify_config_reference_format_invalid_config_reference_key" classname="common" timestamp="2025-07-16T15:36:54.854+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::state::tests::utest_verify_configs_format_incompatible_workload_config_alias" classname="common" timestamp="2025-07-16T15:36:54.852+00:00" time="0.007">
+        </testcase>
+        <testcase name="objects::tag::tests::utest_converts_to_proto_tag" classname="common" timestamp="2025-07-16T15:36:54.859+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::tag::tests::utest_converts_to_dots_tag" classname="common" timestamp="2025-07-16T15:36:54.859+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_add_condition_from_int" classname="common" timestamp="2025-07-16T15:36:54.864+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_instance_name::tests::utest_workload_execution_instance_name_builder" classname="common" timestamp="2025-07-16T15:36:54.864+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_delete_condition_from_int" classname="common" timestamp="2025-07-16T15:36:54.870+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_add_condition_fulfilled_by_fulfilled" classname="common" timestamp="2025-07-16T15:36:54.869+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_delete_condition_fulfilled_by" classname="common" timestamp="2025-07-16T15:36:54.875+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_get_workloads_per_agent_one_agent_one_workload" classname="common" timestamp="2025-07-16T15:36:54.875+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_needs_control_interface" classname="common" timestamp="2025-07-16T15:36:54.880+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_restart_display" classname="common" timestamp="2025-07-16T15:36:54.880+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_restart_to_int" classname="common" timestamp="2025-07-16T15:36:54.885+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_serialize_deleted_workload_into_ordered_output" classname="common" timestamp="2025-07-16T15:36:54.886+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_verify_workload_name_format_inordinately_long_workload_name" classname="common" timestamp="2025-07-16T15:36:54.890+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_workload_has_files" classname="common" timestamp="2025-07-16T15:36:54.891+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_workload_has_files_empty" classname="common" timestamp="2025-07-16T15:36:54.896+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_workload_verify_fields_format_success" classname="common" timestamp="2025-07-16T15:36:54.896+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_workload_verify_fields_incompatible_workload_name" classname="common" timestamp="2025-07-16T15:36:54.902+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_spec::tests::utest_workload_verify_fields_incompatible_agent_name" classname="common" timestamp="2025-07-16T15:36:54.900+00:00" time="0.007">
+        </testcase>
+        <testcase name="objects::workload_state::tests::utest_converts_to_proto_workload_state" classname="common" timestamp="2025-07-16T15:36:54.908+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::workload_state::tests::utest_converts_to_dots_workload_state" classname="common" timestamp="2025-07-16T15:36:54.907+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::workload_state::tests::utest_execution_state_from_proto_mapping" classname="common" timestamp="2025-07-16T15:36:54.912+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_state::tests::utest_execution_state_to_proto_mapping" classname="common" timestamp="2025-07-16T15:36:54.913+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_state::tests::utest_execution_state_to_string_basic_mapping" classname="common" timestamp="2025-07-16T15:36:54.917+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::workload_state::tests::utest_execution_state_transition_hysteresis" classname="common" timestamp="2025-07-16T15:36:54.918+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_get_workload_state_for_agent_returns_empty_list_of_non_existing_agent_name" classname="common" timestamp="2025-07-16T15:36:54.921+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_get_workload_state_for_agent_returns_workload_state_of_existing_agent_name" classname="common" timestamp="2025-07-16T15:36:54.922+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_get_workload_state_for_workload_existing_workload" classname="common" timestamp="2025-07-16T15:36:54.926+00:00" time="0.007">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_get_workload_state_for_workload_not_existing_workload" classname="common" timestamp="2025-07-16T15:36:54.928+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_mark_all_workload_state_for_agent_disconnected" classname="common" timestamp="2025-07-16T15:36:54.933+00:00" time="0.004">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_get_workload_states_excluding_agent_returns_correct" classname="common" timestamp="2025-07-16T15:36:54.933+00:00" time="0.006">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_workload_states_deletes_removed" classname="common" timestamp="2025-07-16T15:36:54.938+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_workload_states_initial_state" classname="common" timestamp="2025-07-16T15:36:54.939+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_workload_states_map_into_vec_of_workload_states" classname="common" timestamp="2025-07-16T15:36:54.943+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_workload_states_store_new" classname="common" timestamp="2025-07-16T15:36:54.944+00:00" time="0.005">
+        </testcase>
+        <testcase name="objects::workload_states_map::tests::utest_workload_states_store_update" classname="common" timestamp="2025-07-16T15:36:54.947+00:00" time="0.005">
+        </testcase>
+        <testcase name="request_id_prepending::tests::utest_detach_prefix_from_request_id_returns_a_tuple_prefix_and_request_id_when_provided_prefixed_request_id" classname="common" timestamp="2025-07-16T15:36:54.949+00:00" time="0.005">
+        </testcase>
+        <testcase name="request_id_prepending::tests::utest_detach_prefix_from_request_id_returns_a_tuple_prefix_and_request_id_when_provided_prefixed_request_id_with_multiple_separators" classname="common" timestamp="2025-07-16T15:36:54.952+00:00" time="0.004">
+        </testcase>
+        <testcase name="request_id_prepending::tests::utest_detach_prefix_from_request_id_returns_a_tuple_with_empty_prefix_and_request_id_when_provided_raw_request_id" classname="common" timestamp="2025-07-16T15:36:54.954+00:00" time="0.005">
+        </testcase>
+        <testcase name="request_id_prepending::tests::utest_detach_prefix_from_request_id_returns_empty_tuple_when_provided_empty_request_id" classname="common" timestamp="2025-07-16T15:36:54.956+00:00" time="0.004">
+        </testcase>
+        <testcase name="request_id_prepending::tests::utest_prepend_request_id_returns_request_id_when_provided_agent_name_is_empty" classname="common" timestamp="2025-07-16T15:36:54.960+00:00" time="0.004">
+        </testcase>
+        <testcase name="request_id_prepending::tests::utest_prepend_request_id_returns_empty_when_provided_request_id_is_empty" classname="common" timestamp="2025-07-16T15:36:54.959+00:00" time="0.005">
+        </testcase>
+        <testcase name="request_id_prepending::tests::utest_prepend_request_id_returns_with_agent_name_prefixed_request_id_when_provided_request_id_and_agent_name" classname="common" timestamp="2025-07-16T15:36:54.964+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_complete_state_from_object" classname="common" timestamp="2025-07-16T15:36:54.965+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_generate_paths_from_yaml_node_full" classname="common" timestamp="2025-07-16T15:36:54.969+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_generate_paths_from_yaml_node_leaf_nodes_only" classname="common" timestamp="2025-07-16T15:36:54.970+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_from_complete_state" classname="common" timestamp="2025-07-16T15:36:54.974+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_from_state" classname="common" timestamp="2025-07-16T15:36:54.975+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_get_existing" classname="common" timestamp="2025-07-16T15:36:54.979+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_get_from_not_map" classname="common" timestamp="2025-07-16T15:36:54.980+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_get_from_sequence" classname="common" timestamp="2025-07-16T15:36:54.984+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_get_non_existing" classname="common" timestamp="2025-07-16T15:36:54.986+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_into_vec_of_path" classname="common" timestamp="2025-07-16T15:36:54.989+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_remove_empty_path" classname="common" timestamp="2025-07-16T15:36:54.991+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_remove_existing" classname="common" timestamp="2025-07-16T15:36:54.994+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_remove_non_existing_end_of_path" classname="common" timestamp="2025-07-16T15:36:54.996+00:00" time="0.006">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_remove_non_existing_in_path" classname="common" timestamp="2025-07-16T15:36:54.998+00:00" time="0.008">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_remove_non_map_in_path" classname="common" timestamp="2025-07-16T15:36:55.002+00:00" time="0.006">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_set_existing" classname="common" timestamp="2025-07-16T15:36:55.007+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_set_fails_as_base_not_mapping" classname="common" timestamp="2025-07-16T15:36:55.007+00:00" time="0.007">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_set_fails_as_not_mapping" classname="common" timestamp="2025-07-16T15:36:55.012+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_set_fails_on_empty" classname="common" timestamp="2025-07-16T15:36:55.014+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_set_in_new_mapping" classname="common" timestamp="2025-07-16T15:36:55.017+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_object_set_new" classname="common" timestamp="2025-07-16T15:36:55.020+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::object::tests::utest_state_from_object" classname="common" timestamp="2025-07-16T15:36:55.022+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::path::tests::utest_path_from_empty_str" classname="common" timestamp="2025-07-16T15:36:55.025+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::path::tests::utest_path_from_empty_string" classname="common" timestamp="2025-07-16T15:36:55.027+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::path::tests::utest_path_from_empty_string_ref" classname="common" timestamp="2025-07-16T15:36:55.029+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::path::tests::utest_path_from_str" classname="common" timestamp="2025-07-16T15:36:55.033+00:00" time="0.006">
+        </testcase>
+        <testcase name="state_manipulation::path::tests::utest_path_from_string" classname="common" timestamp="2025-07-16T15:36:55.034+00:00" time="0.005">
+        </testcase>
+        <testcase name="state_manipulation::path::tests::utest_path_from_string_ref" classname="common" timestamp="2025-07-16T15:36:55.038+00:00" time="0.005">
+        </testcase>
+        <testcase name="to_server_interface::tests::utest_to_server_send_agent_gone" classname="common" timestamp="2025-07-16T15:36:55.039+00:00" time="0.006">
+        </testcase>
+        <testcase name="to_server_interface::tests::utest_to_server_send_agent_hello" classname="common" timestamp="2025-07-16T15:36:55.043+00:00" time="0.005">
+        </testcase>
+        <testcase name="to_server_interface::tests::utest_to_server_send_agent_load_status" classname="common" timestamp="2025-07-16T15:36:55.045+00:00" time="0.006">
+        </testcase>
+        <testcase name="to_server_interface::tests::utest_to_server_send_request_complete_state" classname="common" timestamp="2025-07-16T15:36:55.049+00:00" time="0.006">
+        </testcase>
+        <testcase name="to_server_interface::tests::utest_to_server_send_update_state" classname="common" timestamp="2025-07-16T15:36:55.051+00:00" time="0.006">
+        </testcase>
+        <testcase name="to_server_interface::tests::utest_to_server_send_update_workload_state" classname="common" timestamp="2025-07-16T15:36:55.054+00:00" time="0.005">
+        </testcase>
+    </testsuite>
+    <testsuite name="api" tests="12" disabled="0" errors="0" failures="0">
+        <testcase name="convert::tests::utest_convert_from_bool_fails" classname="api" timestamp="2025-07-16T15:36:54.720+00:00" time="0.004">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_from_number_fails" classname="api" timestamp="2025-07-16T15:36:54.721+00:00" time="0.004">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_none_from_yaml" classname="api" timestamp="2025-07-16T15:36:54.725+00:00" time="0.004">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_none_to_yaml" classname="api" timestamp="2025-07-16T15:36:54.725+00:00" time="0.005">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_object_from_yaml" classname="api" timestamp="2025-07-16T15:36:54.728+00:00" time="0.004">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_object_to_yaml" classname="api" timestamp="2025-07-16T15:36:54.730+00:00" time="0.005">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_string_from_yaml" classname="api" timestamp="2025-07-16T15:36:54.733+00:00" time="0.005">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_string_to_yaml" classname="api" timestamp="2025-07-16T15:36:54.735+00:00" time="0.004">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_with_non_string_key_fails" classname="api" timestamp="2025-07-16T15:36:54.738+00:00" time="0.005">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_with_not_convertible_array_value_fails" classname="api" timestamp="2025-07-16T15:36:54.739+00:00" time="0.004">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_with_not_convertible_object_value_fails" classname="api" timestamp="2025-07-16T15:36:54.742+00:00" time="0.004">
+        </testcase>
+        <testcase name="convert::tests::utest_convert_with_tags_fails" classname="api" timestamp="2025-07-16T15:36:54.743+00:00" time="0.005">
+        </testcase>
+    </testsuite>
+    <testsuite name="dotops::bin/dotops" tests="86" disabled="0" errors="0" failures="0">
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_fails_agent_contains_non_existing_config" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.180+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_fails_field_uses_config_key_instead_of_alias" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.184+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_fails_runtime_config_contains_non_existing_config" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.186+00:00" time="0.009">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_fails_workload_references_empty_configs" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.190+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_fails_workload_references_not_existing_config_key" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.195+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_fails_workload_references_unused_not_existing_config_key" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.196+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_not_rendering_workloads_with_no_referenced_configs" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.200+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_prevent_escaping_special_characters" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.202+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_render_agent_and_runtime_config_fields_successfully" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.206+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_render_files_fields_binary_file_render_error" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.208+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_render_files_fields_successfully" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.212+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_render_files_fields_text_file_render_error" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.214+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::config_renderer::tests::utest_render_workloads_with_keeping_indentation_level_with_partial" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.218+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_continue_on_non_existing_workload_in_dependencies" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.220+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_continue_on_non_existing_workload_in_dependencies_and_find_cycles" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.224+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_cycle_in_dependencies_1" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.225+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_cycle_in_dependencies_3" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.231+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_cycle_in_dependencies_2" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.230+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_cycle_in_dependencies_5" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.237+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_cycle_in_dependencies_4" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.236+00:00" time="0.012">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_cycle_in_dependencies_star_1" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.243+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_no_cycle_in_dependencies_1" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.248+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_no_cycle_in_dependencies_2" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.250+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_no_cycle_in_dependencies_separated_graphs_1" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.254+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_no_cycle_in_dependencies_star_1" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.256+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_self_cycle_in_dependencies" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.261+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::cycle_check::tests::utest_detect_self_cycle_in_dependencies_separated_graphs" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.263+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::delete_graph::tests::utest_delete_graph_apply_delete_conditions" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.267+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::delete_graph::tests::utest_delete_graph_insert" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.269+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::delete_graph::tests::utest_remove_deleted_workloads_from_delete_graph_delete_entries" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.271+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::delete_graph::tests::utest_remove_deleted_workloads_from_delete_graph_ignore_not_relevant_workload_states" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.275+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::delete_graph::tests::utest_remove_deleted_workloads_from_delete_graph_keep_entries" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.276+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_add_agent" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.280+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_contains_connected_agent" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.281+00:00" time="0.004">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_remove_agent" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.285+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_remove_deleted_workloads_from_delete_graph" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.286+00:00" time="0.009">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_get_complete_state_by_field_mask" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.292+00:00" time="0.011">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_get_complete_state_by_field_mask_continue_on_invalid_mask" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.295+00:00" time="0.008">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_get_complete_state_by_field_mask_empty_mask" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.303+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_get_workloads_per_agent" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.305+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_agent_resource_availability" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.310+00:00" time="0.005">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_add_workload" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.311+00:00" time="0.008">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_deleted_workloads" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.315+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_fails_with_update_mask_empty_string" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.319+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_no_update" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.325+00:00" time="0.004">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_new_workloads" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.321+00:00" time="0.009">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_remove_fails_from_non_map" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.330+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_reject_state_with_cyclic_dependencies" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.330+00:00" time="0.009">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_remove_workload" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.338+00:00" time="0.008">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_remove_non_existing_workload" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.336+00:00" time="0.012">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_replace_all_if_update_mask_empty" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.346+00:00" time="0.010">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_replace_workload" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.348+00:00" time="0.009">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_store_and_add_delete_conditions" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.356+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_update_configs_not_affecting_workloads" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.357+00:00" time="0.010">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_update_workload_on_changed_configs" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.363+00:00" time="0.011">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_update_workload_with_existing_configs" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.367+00:00" time="0.010">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_workload_references_removed_configs" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.377+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::server_state::tests::utest_server_state_update_state_updated_workload" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.374+00:00" time="0.013">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_handles_deleted_workload_on_empty_agent" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.383+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_handles_pending_initial_deleted_workload_on_not_connected_agent" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.387+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_rejects_update_state_with_incompatible_version" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.394+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_receives_agent_status_load" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.389+00:00" time="0.015">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_rejects_update_state_without_api_version" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.400+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_returns_complete_state_when_received_request_complete_state" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.404+00:00" time="0.009">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_returns_complete_state_when_received_request_complete_state_error" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.407+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_sends_workloads_and_workload_states" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.413+00:00" time="0.008">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_sends_workloads_and_workload_states_when_requested_update_state_error" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.414+00:00" time="0.209">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_sends_workloads_and_workload_states_when_requested_update_state_nothing_to_do" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.421+00:00" time="0.207">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_sends_workloads_and_workload_states_when_requested_update_state_success" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.623+00:00" time="0.007">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_start_distributes_workload_states_after_agent_disconnect" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.630+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_start_calls_agents_in_update_state_command" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.628+00:00" time="0.009">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_start_fail_on_invalid_startup_manifest" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.636+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_start_fail_on_startup_manifest_with_invalid_version" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.637+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_start_with_valid_startup_manifest" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.642+00:00" time="0.006">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_triggers_delete_of_actually_removed_workloads_from_delete_graph" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.647+00:00" time="0.004">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_update_state_continues_on_invalid_new_state" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.651+00:00" time="0.006">
+        </testcase>
+        <testcase name="server_config::tests::utest_default_server_config" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.657+00:00" time="0.003">
+        </testcase>
+        <testcase name="server_config::tests::utest_server_config_conflicting_certificates" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.661+00:00" time="0.004">
+        </testcase>
+        <testcase name="server_config::tests::utest_server_config_from_file_successful" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.664+00:00" time="0.004">
+        </testcase>
+        <testcase name="server_config::tests::utest_server_config_update_with_args" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.668+00:00" time="0.003">
+        </testcase>
+        <testcase name="server_config::tests::utest_server_config_update_with_args_certificates_content" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.671+00:00" time="0.004">
+        </testcase>
+        <testcase name="server_config::tests::utest_server_config_wrong_version" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.675+00:00" time="0.003">
+        </testcase>
+        <testcase name="tests::utest_handle_server_config_default" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.678+00:00" time="0.003">
+        </testcase>
+        <testcase name="tests::utest_handle_server_config_default_path" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.682+00:00" time="0.004">
+        </testcase>
+        <testcase name="tests::utest_handle_server_config_valid_config" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.685+00:00" time="0.003">
+        </testcase>
+        <testcase name="dots_server::tests::utest_server_stop" classname="dotops::bin/dotops" timestamp="2025-07-16T15:37:00.642+00:00" time="0.056">
+        </testcase>
+    </testsuite>
+</testsuites>

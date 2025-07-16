@@ -1,0 +1,60 @@
+[2025-07-16T15:36:58Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:36:58Z DEBUG dot] Starting the Dots dot with 
+    	name: 'agent_A', 
+    	server url: 'https://127.0.0.1:25551', 
+    	run directory: '/tmp/dots/'
+[2025-07-16T15:36:58Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-07-16T15:36:58Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-07-16T15:36:58Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:36:58Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
+    	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest1", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, tags: [], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/sleepy:latest\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest2", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, tags: [], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/sleepy:latest\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
+[2025-07-16T15:36:58Z INFO  dot::runtime_manager] Received the dotops hello with '2' added workloads.
+[2025-07-16T15:36:58Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
+[2025-07-16T15:36:58Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
+[2025-07-16T15:36:58Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-07-16T15:36:58Z INFO  dot::runtime_manager] No control interface access specified for workload 'sleepy_from_manifest2'
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'sleepy_from_manifest2'.
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'sleepy_from_manifest2'.
+[2025-07-16T15:36:58Z INFO  dot::runtime_manager] No control interface access specified for workload 'sleepy_from_manifest1'
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'sleepy_from_manifest1'.
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'sleepy_from_manifest1'.
+[2025-07-16T15:36:58Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-07-16T15:36:58Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-07-16T15:36:58Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest2", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'sleepy_from_manifest1.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A' with image 'dotscloud/sleepy:latest'
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "sleepy_from_manifest1.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A", "--label=name=sleepy_from_manifest1.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A", "--label=dot=agent_A", "dotscloud/sleepy:latest"]'
+[2025-07-16T15:36:58Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest1", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'sleepy_from_manifest2.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A' with image 'dotscloud/sleepy:latest'
+[2025-07-16T15:36:58Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "sleepy_from_manifest2.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A", "--label=name=sleepy_from_manifest2.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A", "--label=dot=agent_A", "dotscloud/sleepy:latest"]'
+[2025-07-16T15:36:59Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'sleepy_from_manifest2.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A' has been created with internal id 'bfdbd879442de1e4c79be119bd80c2568413f07c140d24b4904d076840dc2bd7'
+[2025-07-16T15:36:59Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'sleepy_from_manifest2.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A' with internal id 'bfdbd879442de1e4c79be119bd80c2568413f07c140d24b4904d076840dc2bd7'
+[2025-07-16T15:36:59Z INFO  dot::workload::workload_control_loop] Successfully created workload 'sleepy_from_manifest2'.
+[2025-07-16T15:36:59Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'sleepy_from_manifest1.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A' has been created with internal id '966dfe6060ba87364e7051e1f324504071aa2148c8ff63cfd975ddb73728e3de'
+[2025-07-16T15:36:59Z DEBUG dot::generic_polling_state_checker] The workload sleepy_from_manifest2 has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-07-16T15:36:59Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'sleepy_from_manifest1.7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc.agent_A' with internal id '966dfe6060ba87364e7051e1f324504071aa2148c8ff63cfd975ddb73728e3de'
+[2025-07-16T15:36:59Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest2", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-07-16T15:36:59Z INFO  dot::workload::workload_control_loop] Successfully created workload 'sleepy_from_manifest1'.
+[2025-07-16T15:36:59Z DEBUG dot::generic_polling_state_checker] The workload sleepy_from_manifest1 has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-07-16T15:36:59Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest1", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-07-16T15:36:59Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:36:59Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
+    	Added workloads: []
+    	Deleted workloads: [DeletedWorkload { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest1", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, dependencies: {} }, DeletedWorkload { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest2", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, dependencies: {} }]
+[2025-07-16T15:36:59Z INFO  dot::runtime_manager] Received a new desired state with '0' added and '2' deleted workloads.
+[2025-07-16T15:36:59Z INFO  dot::workload] Deleting workload 'sleepy_from_manifest1'.
+[2025-07-16T15:36:59Z INFO  dot::workload] Deleting workload 'sleepy_from_manifest2'.
+[2025-07-16T15:36:59Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Delete.
+[2025-07-16T15:36:59Z DEBUG dot::runtime_connectors::podman::podman_runtime] Deleting workload with id '966dfe6060ba87364e7051e1f324504071aa2148c8ff63cfd975ddb73728e3de'
+[2025-07-16T15:36:59Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Delete.
+[2025-07-16T15:36:59Z DEBUG dot::runtime_connectors::podman::podman_runtime] Deleting workload with id 'bfdbd879442de1e4c79be119bd80c2568413f07c140d24b4904d076840dc2bd7'
+[2025-07-16T15:36:59Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest1", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }'.
+[2025-07-16T15:36:59Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest2", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }'.
+[2025-07-16T15:36:59Z DEBUG dot::workload::workload_control_loop] Stop workload complete
+[2025-07-16T15:36:59Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest1", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }'.
+[2025-07-16T15:36:59Z DEBUG dot::workload::workload_control_loop] Stop workload complete
+[2025-07-16T15:36:59Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy_from_manifest2", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }'.
+[2025-07-16T15:36:59Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-07-16T15:36:59Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'

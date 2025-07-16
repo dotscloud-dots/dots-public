@@ -1,0 +1,15 @@
+[2025-07-16T15:38:28Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:38:28Z DEBUG dotops] Starting the Dots dotops with 
+    	dotops address: '127.0.0.1:25551', 
+    	startup manifest path: '/__w/dot/dot/tests/resources/configs/invalid_templated_manifest.yaml'
+[2025-07-16T15:38:28Z WARN  grpc::server] !!!DOTOPS IS STARTED IN INSECURE MODE (-k, --insecure) -> TLS is disabled!!!
+[2025-07-16T15:38:28Z DEBUG dotops::dots_server::config_renderer] Rendering workload 'sleepy' with config '{"port": ConfigObject({"access_port": String("8081")})}'
+[2025-07-16T15:38:28Z ERROR] dotops error: 'Resulting State is invalid, reason: 'Failed to render field 'runtimeConfig': 'Failed to parse template Template error: helper "each" was opened, but "invalid_closing" is closing
+        --> Template error in "Unnamed":2:48
+         |
+       0 | image: dotscloud/sleepy:latest
+       1 | commandOptions: [ "-p", "{{#each port}}{{this}}{{/invalid_closing}}:80"]
+         |------------------------------------------------^-----------------------
+         |
+         = reason: helper "each" was opened, but "invalid_closing" is closing
+    '''

@@ -1,0 +1,19 @@
+[2025-07-16T15:38:27Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:38:27Z DEBUG dot] Starting the Dots dot with 
+    	name: 'agent_A', 
+    	server url: 'https://127.0.0.1:25551', 
+    	run directory: '/tmp/dots/'
+[2025-07-16T15:38:27Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-07-16T15:38:27Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-07-16T15:38:27Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:38:27Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
+    	Added workloads: []
+[2025-07-16T15:38:27Z INFO  dot::runtime_manager] Received the dotops hello with '0' added workloads.
+[2025-07-16T15:38:27Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-07-16T15:38:27Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
+[2025-07-16T15:38:27Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
+[2025-07-16T15:38:27Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
+[2025-07-16T15:38:27Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
+[2025-07-16T15:38:28Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-07-16T15:38:28Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-07-16T15:38:28Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'

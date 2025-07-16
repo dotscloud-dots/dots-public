@@ -1,0 +1,96 @@
+[2025-07-16T15:37:27Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-07-16T15:37:27Z DEBUG dot] Starting the Dots dot with 
+    	name: 'agent_A', 
+    	server url: 'https://127.0.0.1:25551', 
+    	run directory: '/tmp/dots/'
+[2025-07-16T15:37:27Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-07-16T15:37:27Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "storage_provider", id: "4c903d3c2c3315251d472811ca6e89379a62dac21cdb77314a7294ca73d922ff" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }] }
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_B'
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Initial), additional_info: "" }' for the workload 'storage_provider' in the dot 'agent_B'
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
+    	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "error_notifier", id: "dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {"storage_provider": AddCondFailed}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [ \"echo\", \"Send error notifications.\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "logger", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {"storage_provider": AddCondRunning}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [ \"--entrypoint\", \"/bin/sleep\" ]\ncommandArgs: [ \"1\" ]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
+[2025-07-16T15:37:27Z INFO  dot::runtime_manager] Received the dotops hello with '2' added workloads.
+[2025-07-16T15:37:27Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-07-16T15:37:27Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
+[2025-07-16T15:37:27Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
+[2025-07-16T15:37:27Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
+[2025-07-16T15:37:27Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
+[2025-07-16T15:37:27Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "logger", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }'.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "error_notifier", id: "dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }'.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "storage_provider", id: "4c903d3c2c3315251d472811ca6e89379a62dac21cdb77314a7294ca73d922ff" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }] }
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(WaitingToStart), additional_info: "" }' for the workload 'storage_provider' in the dot 'agent_B'
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }] }
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." }' for the workload 'filesystem_init' in the dot 'agent_B'
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }] }
+[2025-07-16T15:37:27Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Running(Ok), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_B'
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:27Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:28Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:28Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "filesystem_init", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }] }
+[2025-07-16T15:37:28Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Succeeded(Ok), additional_info: "" }' for the workload 'filesystem_init' in the dot 'agent_B'
+[2025-07-16T15:37:28Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:28Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:28Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:28Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "storage_provider", id: "4c903d3c2c3315251d472811ca6e89379a62dac21cdb77314a7294ca73d922ff" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }] }
+[2025-07-16T15:37:28Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." }' for the workload 'storage_provider' in the dot 'agent_B'
+[2025-07-16T15:37:28Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'logger' on waiting queue.
+[2025-07-16T15:37:28Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:29Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:29Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "storage_provider", id: "4c903d3c2c3315251d472811ca6e89379a62dac21cdb77314a7294ca73d922ff" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }] }
+[2025-07-16T15:37:29Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Running(Ok), additional_info: "" }' for the workload 'storage_provider' in the dot 'agent_B'
+[2025-07-16T15:37:29Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:29Z INFO  dot::runtime_manager] No control interface access specified for workload 'logger'
+[2025-07-16T15:37:29Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'logger'.
+[2025-07-16T15:37:29Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'logger'.
+[2025-07-16T15:37:29Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-07-16T15:37:29Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "logger", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-07-16T15:37:29Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:29Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'logger.d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f.agent_A' with image 'dotscloud/nginx:latest'
+[2025-07-16T15:37:29Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "logger.d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f.agent_A", "--entrypoint", "/bin/sleep", "--label=name=logger.d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "1"]'
+[2025-07-16T15:37:29Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'logger.d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f.agent_A' has been created with internal id '6e96654b658abf7e4e9c5c62254e44973f44d16cab32396f6befc3740f77db9f'
+[2025-07-16T15:37:29Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'logger.d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f.agent_A' with internal id '6e96654b658abf7e4e9c5c62254e44973f44d16cab32396f6befc3740f77db9f'
+[2025-07-16T15:37:29Z INFO  dot::workload::workload_control_loop] Successfully created workload 'logger'.
+[2025-07-16T15:37:29Z DEBUG dot::generic_polling_state_checker] The workload logger has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-07-16T15:37:29Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "logger", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-07-16T15:37:29Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:30Z DEBUG dot::generic_polling_state_checker] The workload logger has changed its state to ExecutionState { state: Succeeded(Ok), additional_info: "" }
+[2025-07-16T15:37:30Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "logger", id: "d9fe2b70c967cc790c904afb6663aa7ae4f40d8fd5badf6d6b5858e1b7a81e8f" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }'.
+[2025-07-16T15:37:30Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'error_notifier' on waiting queue.
+[2025-07-16T15:37:31Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-07-16T15:37:31Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkloadState: UpdateWorkloadState { workload_states: [WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "storage_provider", id: "4c903d3c2c3315251d472811ca6e89379a62dac21cdb77314a7294ca73d922ff" }, execution_state: ExecutionState { state: Failed(ExecFailed), additional_info: "Exit code: '1'" } }] }
+[2025-07-16T15:37:31Z DEBUG dot::agent_manager] The dotops reports workload state 'ExecutionState { state: Failed(ExecFailed), additional_info: "Exit code: '1'" }' for the workload 'storage_provider' in the dot 'agent_B'
+[2025-07-16T15:37:31Z INFO  dot::runtime_manager] No control interface access specified for workload 'error_notifier'
+[2025-07-16T15:37:31Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'error_notifier'.
+[2025-07-16T15:37:31Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'error_notifier'.
+[2025-07-16T15:37:31Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-07-16T15:37:31Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "error_notifier", id: "dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-07-16T15:37:31Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'error_notifier.dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829.agent_A' with image 'dotscloud/nginx:latest'
+[2025-07-16T15:37:31Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "error_notifier.dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829.agent_A", "--label=name=error_notifier.dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "echo", "Send error notifications."]'
+[2025-07-16T15:37:31Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'error_notifier.dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829.agent_A' has been created with internal id '1bc6d70bb1c0765484a5902edcf9c427ce3f61377ef44cb28c78ba5bb79de4ad'
+[2025-07-16T15:37:31Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'error_notifier.dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829.agent_A' with internal id '1bc6d70bb1c0765484a5902edcf9c427ce3f61377ef44cb28c78ba5bb79de4ad'
+[2025-07-16T15:37:31Z INFO  dot::workload::workload_control_loop] Successfully created workload 'error_notifier'.
+[2025-07-16T15:37:31Z DEBUG dot::generic_polling_state_checker] The workload error_notifier has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-07-16T15:37:31Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "error_notifier", id: "dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-07-16T15:37:33Z DEBUG dot::generic_polling_state_checker] The workload error_notifier has changed its state to ExecutionState { state: Succeeded(Ok), additional_info: "" }
+[2025-07-16T15:37:33Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "error_notifier", id: "dfb061051fe89917d9c4052ca75ea8aea28c1927142fdc68ec2adcfc09ec3829" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }'.
+[2025-07-16T15:37:33Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-07-16T15:37:33Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'
