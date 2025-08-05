@@ -4,7 +4,7 @@ set -e
 
 # GITHUB RELEASE URL SCHEMA for concrete release artifact: https://github.com/<organisation>/<repo>/releases/download/<tag>/<concrete_artifact>
 # GITHUB RELEASE URL SCHEMA for latest release artifact: https://github.com/<organisation>/<repo>/releases/latest/download/<concrete_artifact> (takes the release marked as latest)
-RELEASE_URL_BASE="https://github.com/eclipse-dots/dots/releases"
+RELEASE_URL_BASE="https://github.com/dotscloud-dots/dots-public/releases"
 DEFAULT_BIN_DESTINATION="/usr/local/bin"
 BIN_DESTINATION="${DEFAULT_BIN_DESTINATION}"
 DEFAULT_AGENT_OPT="--insecure --name agent_A"
@@ -250,7 +250,9 @@ fi
 rm -f "${FILE_DOTOPS_SERVICE}" "${FILE_DOT_SERVICE}"
 
 echo "Removing Dots binaries"
-rm -f "${BIN_DESTINATION}"/dotctl{,-server,-agent}
+rm -f "${BIN_DESTINATION}"/dotops
+rm -f "${BIN_DESTINATION}"/dotctl
+rm -f "${BIN_DESTINATION}"/dot
 echo "Removing this uninstall script"
 rm -f "${BIN_DESTINATION}/${BASEFILE_DOTCTL_UNINSTALL}"
 EOF
