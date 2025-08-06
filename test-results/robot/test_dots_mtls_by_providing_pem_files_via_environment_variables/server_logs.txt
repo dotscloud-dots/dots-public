@@ -1,130 +1,101 @@
-[2025-08-06T14:01:01Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
-[2025-08-06T14:01:01Z DEBUG dotops] Starting the Dots dotops with 
+[2025-08-06T15:04:16Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
+[2025-08-06T15:04:16Z DEBUG dotops] Starting the Dots dotops with 
     	dotops address: '127.0.0.1:25551', 
     	startup manifest path: '/__w/dots/dots/tests/resources/configs/default.yaml'
-[2025-08-06T14:01:01Z WARN  dotops] Insecure and secure flags specified at the same time. Defaulting to secure communication.
-[2025-08-06T14:01:01Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello3' as no config is assigned to the workload
-[2025-08-06T14:01:01Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'sleepy' as no config is assigned to the workload
-[2025-08-06T14:01:01Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello1' as no config is assigned to the workload
-[2025-08-06T14:01:01Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello2' as no config is assigned to the workload
-[2025-08-06T14:01:01Z INFO  dotops::dots_server] Starting...
-[2025-08-06T14:01:01Z DEBUG dotops::dots_server] Start listening to agents...
-[2025-08-06T14:01:01Z DEBUG rustls::anchors] add_parsable_certificates processed 1 valid and 0 invalid certs
-[2025-08-06T14:01:01Z INFO  grpc::from_server_proxy] Agent agent_B not found, workloads not sent. Waiting for dot to connect.
-[2025-08-06T14:01:01Z INFO  grpc::from_server_proxy] Agent agent_A not found, workloads not sent. Waiting for dot to connect.
-[2025-08-06T14:01:01Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:01Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:01Z INFO  grpc::grpc_agent_connection] Client Subject: CN=agent_A
-[2025-08-06T14:01:01Z INFO  grpc::grpc_agent_connection] Client SAN: ["*"]
-[2025-08-06T14:01:01Z INFO  dotops::dots_server] Received AgentHello from 'agent_B'
-[2025-08-06T14:01:01Z DEBUG dotops::dots_server] Sending initial UpdateWorkloadState to dot 'agent_B' with workload states: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }]'
-[2025-08-06T14:01:01Z DEBUG dotops::dots_server] Sending initial ServerHello to dot 'agent_B' with added workloads: '[WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [ \"echo\", \"Hello Dots\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [ \"--rm\"]\ncommandArgs: [ \"echo\", \"Hello Dots\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [ \"echo\", \"Hello Dots\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]'
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-85dcec8a-8073-42c8-b849-bc9f94a9b37a) open.
-[2025-08-06T14:01:02Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-85dcec8a-8073-42c8-b849-bc9f94a9b37a'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-85dcec8a-8073-42c8-b849-bc9f94a9b37a@011e82e7-7a4a-4a51-9135-232bec9caac6' and field mask: '[]'
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-85dcec8a-8073-42c8-b849-bc9f94a9b37a) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-85dcec8a-8073-42c8-b849-bc9f94a9b37a) has been closed.
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }]'
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-1933f866-3db5-4397-a3df-f60698e73d27) open.
-[2025-08-06T14:01:02Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-1933f866-3db5-4397-a3df-f60698e73d27'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-1933f866-3db5-4397-a3df-f60698e73d27@61983251-6579-40f6-8c0c-805764d253fe' and field mask: '[]'
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-1933f866-3db5-4397-a3df-f60698e73d27) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-1933f866-3db5-4397-a3df-f60698e73d27) has been closed.
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:02Z INFO  grpc::grpc_agent_connection] Client Subject: CN=agent_A
-[2025-08-06T14:01:02Z INFO  grpc::grpc_agent_connection] Client SAN: ["*"]
-[2025-08-06T14:01:02Z INFO  dotops::dots_server] Received AgentHello from 'agent_A'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Sending initial UpdateWorkloadState to dot 'agent_A' with workload states: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Sending initial ServerHello to dot 'agent_A' with added workloads: '[WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/sleepy:latest\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }]'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }]'
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-f8ecdf0e-570d-4fc9-b643-6dd718c5cb87) open.
-[2025-08-06T14:01:02Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-f8ecdf0e-570d-4fc9-b643-6dd718c5cb87'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-f8ecdf0e-570d-4fc9-b643-6dd718c5cb87@939ecf32-b14f-4f7f-9b65-964dfbe0a7dc' and field mask: '[]'
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-f8ecdf0e-570d-4fc9-b643-6dd718c5cb87) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-f8ecdf0e-570d-4fc9-b643-6dd718c5cb87) has been closed.
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }]'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, execution_state: ExecutionState { state: Failed(Lost), additional_info: "" } }]'
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-dc6f6054-c66c-4f50-b2e6-a1262b12024e) open.
-[2025-08-06T14:01:02Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-dc6f6054-c66c-4f50-b2e6-a1262b12024e'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-dc6f6054-c66c-4f50-b2e6-a1262b12024e@a6dee778-0e48-45f0-b43c-a48c72ac7203' and field mask: '[]'
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-dc6f6054-c66c-4f50-b2e6-a1262b12024e) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-dc6f6054-c66c-4f50-b2e6-a1262b12024e) has been closed.
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-619ddbad-46cf-4108-bcd1-779995e2f243) open.
-[2025-08-06T14:01:02Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-619ddbad-46cf-4108-bcd1-779995e2f243'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-619ddbad-46cf-4108-bcd1-779995e2f243@4f3d7b19-9afb-486d-91da-446298430e61' and field mask: '[]'
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-619ddbad-46cf-4108-bcd1-779995e2f243) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-619ddbad-46cf-4108-bcd1-779995e2f243) has been closed.
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-4414b1db-f7b9-4856-9d08-35d2ddf6b15e) open.
-[2025-08-06T14:01:02Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-4414b1db-f7b9-4856-9d08-35d2ddf6b15e'
-[2025-08-06T14:01:02Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-4414b1db-f7b9-4856-9d08-35d2ddf6b15e@bf3950d7-e904-40b0-845f-c6e91c744eb4' and field mask: '[]'
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-4414b1db-f7b9-4856-9d08-35d2ddf6b15e) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-4414b1db-f7b9-4856-9d08-35d2ddf6b15e) has been closed.
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:02Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:02Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-01b2d2cf-cbba-4902-b423-b7829800ff41) open.
-[2025-08-06T14:01:03Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-01b2d2cf-cbba-4902-b423-b7829800ff41'
-[2025-08-06T14:01:03Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-01b2d2cf-cbba-4902-b423-b7829800ff41@29fa03d0-6682-4648-9d52-2db6c0dc08d2' and field mask: '[]'
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-01b2d2cf-cbba-4902-b423-b7829800ff41) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-01b2d2cf-cbba-4902-b423-b7829800ff41) has been closed.
-[2025-08-06T14:01:03Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:03Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-b0e2618a-3980-460f-90c3-5d6a5fd4dd4f) open.
-[2025-08-06T14:01:03Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-b0e2618a-3980-460f-90c3-5d6a5fd4dd4f'
-[2025-08-06T14:01:03Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-b0e2618a-3980-460f-90c3-5d6a5fd4dd4f@3065a222-2f6c-4f6c-b1c6-944cacc1220f' and field mask: '[]'
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-b0e2618a-3980-460f-90c3-5d6a5fd4dd4f) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-b0e2618a-3980-460f-90c3-5d6a5fd4dd4f) has been closed.
-[2025-08-06T14:01:03Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:03Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-52a064ab-460d-412f-b90f-230fb263c84b) open.
-[2025-08-06T14:01:03Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-52a064ab-460d-412f-b90f-230fb263c84b'
-[2025-08-06T14:01:03Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-52a064ab-460d-412f-b90f-230fb263c84b@14d51ed1-f36f-4591-8085-3621414a6ccf' and field mask: '[]'
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-52a064ab-460d-412f-b90f-230fb263c84b) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-52a064ab-460d-412f-b90f-230fb263c84b) has been closed.
-[2025-08-06T14:01:03Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:03Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-fcd8e3a5-35d5-4e8c-898c-43f1ef0e76c4) open.
-[2025-08-06T14:01:03Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-fcd8e3a5-35d5-4e8c-898c-43f1ef0e76c4'
-[2025-08-06T14:01:03Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-fcd8e3a5-35d5-4e8c-898c-43f1ef0e76c4@4cbabe5c-1d75-41e9-a29d-f7164bfead46' and field mask: '[]'
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-fcd8e3a5-35d5-4e8c-898c-43f1ef0e76c4) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-fcd8e3a5-35d5-4e8c-898c-43f1ef0e76c4) has been closed.
-[2025-08-06T14:01:03Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:03Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-e347bfab-979a-4c67-9e78-31c65785a226) open.
-[2025-08-06T14:01:03Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-e347bfab-979a-4c67-9e78-31c65785a226'
-[2025-08-06T14:01:03Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-e347bfab-979a-4c67-9e78-31c65785a226@f7f6dc8a-3a61-42f5-93c6-bb03057200a4' and field mask: '[]'
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-e347bfab-979a-4c67-9e78-31c65785a226) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:03Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-e347bfab-979a-4c67-9e78-31c65785a226) has been closed.
-[2025-08-06T14:01:03Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }]'
-[2025-08-06T14:01:03Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }]'
-[2025-08-06T14:01:04Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:04Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:04Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-dc6015aa-5634-44c7-a58f-e68feb1c308c) open.
-[2025-08-06T14:01:04Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-dc6015aa-5634-44c7-a58f-e68feb1c308c'
-[2025-08-06T14:01:04Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-dc6015aa-5634-44c7-a58f-e68feb1c308c@fbeb24c9-6165-4bcc-a1f3-69d9fc6c8706' and field mask: '[]'
-[2025-08-06T14:01:04Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-dc6015aa-5634-44c7-a58f-e68feb1c308c) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:04Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-dc6015aa-5634-44c7-a58f-e68feb1c308c) has been closed.
-[2025-08-06T14:01:04Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
-[2025-08-06T14:01:04Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
-[2025-08-06T14:01:04Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-d17ecce4-b6cf-4c72-88ea-0900e5e388c8) open.
-[2025-08-06T14:01:04Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-d17ecce4-b6cf-4c72-88ea-0900e5e388c8'
-[2025-08-06T14:01:04Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-d17ecce4-b6cf-4c72-88ea-0900e5e388c8@7434c476-f0ca-43e1-8ab8-d2c2354beacc' and field mask: '[]'
-[2025-08-06T14:01:04Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-d17ecce4-b6cf-4c72-88ea-0900e5e388c8) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T14:01:04Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-d17ecce4-b6cf-4c72-88ea-0900e5e388c8) has been closed.
+[2025-08-06T15:04:16Z WARN  dotops] Insecure and secure flags specified at the same time. Defaulting to secure communication.
+[2025-08-06T15:04:16Z DEBUG rustls::anchors] add_parsable_certificates processed 1 valid and 0 invalid certs
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello1' as no config is assigned to the workload
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello3' as no config is assigned to the workload
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'sleepy' as no config is assigned to the workload
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello2' as no config is assigned to the workload
+[2025-08-06T15:04:16Z INFO  dotops::dots_server] Starting...
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server] Start listening to agents...
+[2025-08-06T15:04:16Z INFO  grpc::from_server_proxy] Agent agent_B not found, workloads not sent. Waiting for dot to connect.
+[2025-08-06T15:04:16Z INFO  grpc::from_server_proxy] Agent agent_A not found, workloads not sent. Waiting for dot to connect.
+[2025-08-06T15:04:16Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:16Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:16Z INFO  grpc::grpc_agent_connection] Client Subject: CN=agent_A
+[2025-08-06T15:04:16Z INFO  grpc::grpc_agent_connection] Client SAN: ["*"]
+[2025-08-06T15:04:16Z INFO  dotops::dots_server] Received AgentHello from 'agent_B'
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server] Sending initial UpdateWorkloadState to dot 'agent_B' with workload states: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(Initial), additional_info: "" } }]'
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server] Sending initial ServerHello to dot 'agent_B' with added workloads: '[WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [ \"--rm\"]\ncommandArgs: [ \"echo\", \"Hello Dots\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [ \"echo\", \"Hello Dots\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [ \"echo\", \"Hello Dots\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]'
+[2025-08-06T15:04:16Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:16Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:16Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-5f12f9fe-34a0-46d0-b4ba-6a41eff57f86) open.
+[2025-08-06T15:04:16Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-5f12f9fe-34a0-46d0-b4ba-6a41eff57f86'
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-5f12f9fe-34a0-46d0-b4ba-6a41eff57f86@731602b3-59da-4344-a69e-6d416a0013f1' and field mask: '[]'
+[2025-08-06T15:04:16Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-5f12f9fe-34a0-46d0-b4ba-6a41eff57f86) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:16Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-5f12f9fe-34a0-46d0-b4ba-6a41eff57f86) has been closed.
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
+[2025-08-06T15:04:16Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }]'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }]'
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-e168213f-465e-4f3e-9d9a-de4f4790bff4) open.
+[2025-08-06T15:04:17Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-e168213f-465e-4f3e-9d9a-de4f4790bff4'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-e168213f-465e-4f3e-9d9a-de4f4790bff4@38adc533-44a6-463e-a315-e48128f1a2bf' and field mask: '[]'
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-e168213f-465e-4f3e-9d9a-de4f4790bff4) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-e168213f-465e-4f3e-9d9a-de4f4790bff4) has been closed.
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, execution_state: ExecutionState { state: Failed(Lost), additional_info: "" } }]'
+[2025-08-06T15:04:17Z INFO  grpc::grpc_agent_connection] Client Subject: CN=agent_A
+[2025-08-06T15:04:17Z INFO  grpc::grpc_agent_connection] Client SAN: ["*"]
+[2025-08-06T15:04:17Z INFO  dotops::dots_server] Received AgentHello from 'agent_A'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Sending initial UpdateWorkloadState to dot 'agent_A' with workload states: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello1", id: "5676c8c1df635eac92773965b4e8366bea6e7d1155b81229d936a795bab28618" }, execution_state: ExecutionState { state: Failed(Lost), additional_info: "" } }, WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }]'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Sending initial ServerHello to dot 'agent_A' with added workloads: '[WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/sleepy:latest\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]'
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-f499f311-a6c9-4493-ad47-a53f83828e33) open.
+[2025-08-06T15:04:17Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-f499f311-a6c9-4493-ad47-a53f83828e33'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-f499f311-a6c9-4493-ad47-a53f83828e33@bf7cff90-1bfe-4fb6-b74e-536bde0d2e21' and field mask: '[]'
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-f499f311-a6c9-4493-ad47-a53f83828e33) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-f499f311-a6c9-4493-ad47-a53f83828e33) has been closed.
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }]'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "sleepy", id: "7cde312752495ad045a9ba6700a3e2ca8a4ae479ebdc1b8e8114fec650e3c7cc" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }]'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello3", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }]'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received UpdateWorkloadState: '[WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_B", workload_name: "hello2", id: "3d22c78f20862b31febceeda042aa21a11e808a8e573dfde49b9280d9592531e" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }]'
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-b69ce25a-d1da-426b-baa6-cf9fa492fbab) open.
+[2025-08-06T15:04:17Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-b69ce25a-d1da-426b-baa6-cf9fa492fbab'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-b69ce25a-d1da-426b-baa6-cf9fa492fbab@f979e136-9367-4926-8765-69def649c454' and field mask: '[]'
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-b69ce25a-d1da-426b-baa6-cf9fa492fbab) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-b69ce25a-d1da-426b-baa6-cf9fa492fbab) has been closed.
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-731e816f-419d-474a-841e-8337d7c3d0dc) open.
+[2025-08-06T15:04:17Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-731e816f-419d-474a-841e-8337d7c3d0dc'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-731e816f-419d-474a-841e-8337d7c3d0dc@d7314968-d5b2-4352-897c-f903f044ea75' and field mask: '[]'
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-731e816f-419d-474a-841e-8337d7c3d0dc) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-731e816f-419d-474a-841e-8337d7c3d0dc) has been closed.
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-fac0e674-96d1-4014-890f-e4bcf51ede26) open.
+[2025-08-06T15:04:17Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-fac0e674-96d1-4014-890f-e4bcf51ede26'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-fac0e674-96d1-4014-890f-e4bcf51ede26@d73f5fac-c8ce-4633-8ba2-3be9968543fc' and field mask: '[]'
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-fac0e674-96d1-4014-890f-e4bcf51ede26) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-fac0e674-96d1-4014-890f-e4bcf51ede26) has been closed.
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-453d3e2e-fe98-476b-b79e-4851769f08af) open.
+[2025-08-06T15:04:17Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-453d3e2e-fe98-476b-b79e-4851769f08af'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-453d3e2e-fe98-476b-b79e-4851769f08af@9ffea887-bf0b-45cc-9ef8-832fd697cadd' and field mask: '[]'
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-453d3e2e-fe98-476b-b79e-4851769f08af) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-453d3e2e-fe98-476b-b79e-4851769f08af) has been closed.
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-18c12e48-74fb-4183-a060-9f86ad4bc74b) open.
+[2025-08-06T15:04:17Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-18c12e48-74fb-4183-a060-9f86ad4bc74b'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-18c12e48-74fb-4183-a060-9f86ad4bc74b@8aa6608d-8dae-4e39-803c-c08d90cc9550' and field mask: '[]'
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-18c12e48-74fb-4183-a060-9f86ad4bc74b) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-18c12e48-74fb-4183-a060-9f86ad4bc74b) has been closed.
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] decided upon suite TLS13_AES_256_GCM_SHA384
+[2025-08-06T15:04:17Z DEBUG rustls::server::hs] Chosen ALPN protocol [104, 50]
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-86f10dcb-8477-466e-bed8-5cb45133a858) open.
+[2025-08-06T15:04:17Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-86f10dcb-8477-466e-bed8-5cb45133a858'
+[2025-08-06T15:04:17Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-86f10dcb-8477-466e-bed8-5cb45133a858@11211a60-149b-4a7d-a432-cff9bce66442' and field mask: '[]'
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-86f10dcb-8477-466e-bed8-5cb45133a858) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: unexpected end of file\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T15:04:17Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-86f10dcb-8477-466e-bed8-5cb45133a858) has been closed.
