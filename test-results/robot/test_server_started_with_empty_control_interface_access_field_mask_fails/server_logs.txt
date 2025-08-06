@@ -1,5 +1,5 @@
-[2025-08-06T15:04:01Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
-[2025-08-06T15:04:01Z DEBUG dotops] Starting the Dots dotops with 
+[2025-08-06T15:34:52Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
+[2025-08-06T15:34:52Z DEBUG dotops] Starting the Dots dotops with 
     	dotops address: '127.0.0.1:25551', 
     	startup manifest path: '/__w/dots/dots/tests/resources/configs/faulty_with_control_as_empty.yaml"'
-[2025-08-06T15:04:01Z ERROR] Could not read the startup config: 'No such file or directory (os error 2)'
+[2025-08-06T15:34:52Z ERROR] Could not read the startup config: 'No such file or directory (os error 2)'
