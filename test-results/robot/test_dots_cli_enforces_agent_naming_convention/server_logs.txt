@@ -1,18 +1,18 @@
-[2025-08-05T15:33:47Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
-[2025-08-05T15:33:47Z DEBUG dotops] Starting the Dots dotops with 
+[2025-08-06T14:00:22Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
+[2025-08-06T14:00:22Z DEBUG dotops] Starting the Dots dotops with 
     	dotops address: '127.0.0.1:25551', 
     	startup manifest path: '/__w/dots/dots/tests/resources/configs/default.yaml'
-[2025-08-05T15:33:47Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'sleepy' as no config is assigned to the workload
-[2025-08-05T15:33:47Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello1' as no config is assigned to the workload
-[2025-08-05T15:33:47Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello3' as no config is assigned to the workload
-[2025-08-05T15:33:47Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello2' as no config is assigned to the workload
-[2025-08-05T15:33:47Z INFO  dotops::dots_server] Starting...
-[2025-08-05T15:33:47Z DEBUG dotops::dots_server] Start listening to agents...
-[2025-08-05T15:33:47Z WARN  grpc::server] !!!DOTOPS IS STARTED IN INSECURE MODE (-k, --insecure) -> TLS is disabled!!!
-[2025-08-05T15:33:47Z INFO  grpc::from_server_proxy] Agent agent_A not found, workloads not sent. Waiting for dot to connect.
-[2025-08-05T15:33:47Z INFO  grpc::from_server_proxy] Agent agent_B not found, workloads not sent. Waiting for dot to connect.
-[2025-08-05T15:33:47Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-771d6e0a-16ac-4524-8811-bcb43eb71452) open.
-[2025-08-05T15:33:47Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-771d6e0a-16ac-4524-8811-bcb43eb71452'
-[2025-08-05T15:33:47Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-771d6e0a-16ac-4524-8811-bcb43eb71452@73d01101-1190-45d8-ba42-882b2f9ff0b0' and field mask: '[]'
-[2025-08-05T15:33:47Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-771d6e0a-16ac-4524-8811-bcb43eb71452) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-05T15:33:47Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-771d6e0a-16ac-4524-8811-bcb43eb71452) has been closed.
+[2025-08-06T14:00:22Z WARN  grpc::server] !!!DOTOPS IS STARTED IN INSECURE MODE (-k, --insecure) -> TLS is disabled!!!
+[2025-08-06T14:00:22Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'sleepy' as no config is assigned to the workload
+[2025-08-06T14:00:22Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello1' as no config is assigned to the workload
+[2025-08-06T14:00:22Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello3' as no config is assigned to the workload
+[2025-08-06T14:00:22Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'hello2' as no config is assigned to the workload
+[2025-08-06T14:00:22Z INFO  dotops::dots_server] Starting...
+[2025-08-06T14:00:22Z DEBUG dotops::dots_server] Start listening to agents...
+[2025-08-06T14:00:22Z INFO  grpc::from_server_proxy] Agent agent_B not found, workloads not sent. Waiting for dot to connect.
+[2025-08-06T14:00:22Z INFO  grpc::from_server_proxy] Agent agent_A not found, workloads not sent. Waiting for dot to connect.
+[2025-08-06T14:00:22Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-9b6e629d-8b59-4f32-832c-e4ebe379aa56) open.
+[2025-08-06T14:00:22Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-9b6e629d-8b59-4f32-832c-e4ebe379aa56'
+[2025-08-06T14:00:22Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-9b6e629d-8b59-4f32-832c-e4ebe379aa56@b8cdfe74-a17e-4b9d-835a-0612bcb86099' and field mask: '[]'
+[2025-08-06T14:00:22Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-9b6e629d-8b59-4f32-832c-e4ebe379aa56) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T14:00:22Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-9b6e629d-8b59-4f32-832c-e4ebe379aa56) has been closed.

@@ -1,59 +1,59 @@
-[2025-08-05T15:35:30Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
-[2025-08-05T15:35:30Z DEBUG dot] Starting the Dots dot with 
+[2025-08-06T14:02:01Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-08-06T14:02:01Z DEBUG dot] Starting the Dots dot with 
     	name: 'agent_A', 
     	server url: 'https://127.0.0.1:25551', 
     	run directory: '/tmp/dots/'
-[2025-08-05T15:35:30Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
-[2025-08-05T15:35:30Z DEBUG grpc::client] gRPC Communication Client starts.
-[2025-08-05T15:35:30Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-08-05T15:35:30Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
+[2025-08-06T14:02:01Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-08-06T14:02:01Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-08-06T14:02:01Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-08-06T14:02:01Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
     	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [ \"--entrypoint\", \"/bin/sleep\", \"--stop-signal=SIGKILL\"]\ncommandArgs: [ \"2000\" ]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
-[2025-08-05T15:35:30Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
-[2025-08-05T15:35:30Z DEBUG dot::runtime_manager] Handling initial workload list.
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
-[2025-08-05T15:35:30Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
-[2025-08-05T15:35:30Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
-[2025-08-05T15:35:30Z INFO  dot::runtime_manager] No control interface access specified for workload 'hello1'
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'hello1'.
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'hello1'.
-[2025-08-05T15:35:30Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
-[2025-08-05T15:35:30Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' with image 'dotscloud/nginx:latest'
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A", "--entrypoint", "/bin/sleep", "--stop-signal=SIGKILL", "--label=name=hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "2000"]'
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' has been created with internal id 'aa82a2254e64092d3f0d501a58bea1619f9ffc064b8591bf600f4b24f78fd23e'
-[2025-08-05T15:35:30Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' with internal id 'aa82a2254e64092d3f0d501a58bea1619f9ffc064b8591bf600f4b24f78fd23e'
-[2025-08-05T15:35:30Z INFO  dot::workload::workload_control_loop] Successfully created workload 'hello1'.
-[2025-08-05T15:35:30Z DEBUG dot::generic_polling_state_checker] The workload hello1 has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
-[2025-08-05T15:35:30Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
-[2025-08-05T15:35:31Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-08-05T15:35:31Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
+[2025-08-06T14:02:01Z INFO  dot::runtime_manager] Received the dotops hello with '1' added workloads.
+[2025-08-06T14:02:01Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-08-06T14:02:01Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
+[2025-08-06T14:02:02Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
+[2025-08-06T14:02:02Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
+[2025-08-06T14:02:02Z INFO  dot::runtime_manager] No control interface access specified for workload 'hello1'
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'hello1'.
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'hello1'.
+[2025-08-06T14:02:02Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' with image 'dotscloud/nginx:latest'
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A", "--entrypoint", "/bin/sleep", "--stop-signal=SIGKILL", "--label=name=hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "2000"]'
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' has been created with internal id '192a9702add8b6cdfe7860267e8b6ccc90ffc98894eb165eae0f06fb1cbd8ea3'
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' with internal id '192a9702add8b6cdfe7860267e8b6ccc90ffc98894eb165eae0f06fb1cbd8ea3'
+[2025-08-06T14:02:02Z INFO  dot::workload::workload_control_loop] Successfully created workload 'hello1'.
+[2025-08-06T14:02:02Z DEBUG dot::generic_polling_state_checker] The workload hello1 has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
     	Added workloads: []
     	Deleted workloads: [DeletedWorkload { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, dependencies: {} }]
-[2025-08-05T15:35:31Z INFO  dot::runtime_manager] Received a new desired state with '0' added and '1' deleted workloads.
-[2025-08-05T15:35:31Z INFO  dot::workload] Deleting workload 'hello1'.
-[2025-08-05T15:35:31Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Delete.
-[2025-08-05T15:35:31Z DEBUG dot::runtime_connectors::podman::podman_runtime] Deleting workload with id 'aa82a2254e64092d3f0d501a58bea1619f9ffc064b8591bf600f4b24f78fd23e'
-[2025-08-05T15:35:31Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }'.
-[2025-08-05T15:35:31Z DEBUG dot::workload::workload_control_loop] Stop workload complete
-[2025-08-05T15:35:31Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }'.
-[2025-08-05T15:35:31Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-08-05T15:35:31Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
+[2025-08-06T14:02:02Z INFO  dot::runtime_manager] Received a new desired state with '0' added and '1' deleted workloads.
+[2025-08-06T14:02:02Z INFO  dot::workload] Deleting workload 'hello1'.
+[2025-08-06T14:02:02Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Delete.
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] Deleting workload with id '192a9702add8b6cdfe7860267e8b6ccc90ffc98894eb165eae0f06fb1cbd8ea3'
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }'.
+[2025-08-06T14:02:02Z DEBUG dot::workload::workload_control_loop] Stop workload complete
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }'.
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
     	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [ \"--entrypoint\", \"/bin/sleep\", \"--stop-signal=SIGKILL\"]\ncommandArgs: [ \"2000\" ]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
     	Deleted workloads: []
-[2025-08-05T15:35:31Z INFO  dot::runtime_manager] Received a new desired state with '1' added and '0' deleted workloads.
-[2025-08-05T15:35:31Z INFO  dot::runtime_manager] No control interface access specified for workload 'hello1'
-[2025-08-05T15:35:31Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'hello1'.
-[2025-08-05T15:35:31Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'hello1'.
-[2025-08-05T15:35:31Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
-[2025-08-05T15:35:31Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' with image 'dotscloud/nginx:latest'
-[2025-08-05T15:35:31Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A", "--entrypoint", "/bin/sleep", "--stop-signal=SIGKILL", "--label=name=hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "2000"]'
-[2025-08-05T15:35:31Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-08-05T15:35:31Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' has been created with internal id '3babb9b54654855d9103b8b64366dc894f6d80b1b155f3b5fe94e0c001b33738'
-[2025-08-05T15:35:31Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' with internal id '3babb9b54654855d9103b8b64366dc894f6d80b1b155f3b5fe94e0c001b33738'
-[2025-08-05T15:35:31Z INFO  dot::workload::workload_control_loop] Successfully created workload 'hello1'.
-[2025-08-05T15:35:31Z DEBUG dot::generic_polling_state_checker] The workload hello1 has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
-[2025-08-05T15:35:31Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
-[2025-08-05T15:35:31Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
-[2025-08-05T15:35:31Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'
+[2025-08-06T14:02:02Z INFO  dot::runtime_manager] Received a new desired state with '1' added and '0' deleted workloads.
+[2025-08-06T14:02:02Z INFO  dot::runtime_manager] No control interface access specified for workload 'hello1'
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'hello1'.
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'hello1'.
+[2025-08-06T14:02:02Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' with image 'dotscloud/nginx:latest'
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A", "--entrypoint", "/bin/sleep", "--stop-signal=SIGKILL", "--label=name=hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "2000"]'
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' has been created with internal id '52e5254a6a42bb7e07145d0470447b9109242ae161dd4e055ab2e056c90c489b'
+[2025-08-06T14:02:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'hello1.b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60.agent_A' with internal id '52e5254a6a42bb7e07145d0470447b9109242ae161dd4e055ab2e056c90c489b'
+[2025-08-06T14:02:02Z INFO  dot::workload::workload_control_loop] Successfully created workload 'hello1'.
+[2025-08-06T14:02:02Z DEBUG dot::generic_polling_state_checker] The workload hello1 has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-08-06T14:02:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "hello1", id: "b0e1defc982e0ef1b117958a4a6b424b7b07555addc0afd96fd9e3122d397b60" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-08-06T14:02:02Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-08-06T14:02:02Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'

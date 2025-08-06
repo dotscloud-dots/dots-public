@@ -1,111 +1,111 @@
-[2025-08-05T15:35:01Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
-[2025-08-05T15:35:01Z DEBUG dot] Starting the Dots dot with 
+[2025-08-06T14:01:33Z DEBUG dot] No config file found at default path '/etc/dots/dotctl-dot.conf'. Using cli arguments and environment variables only.
+[2025-08-06T14:01:33Z DEBUG dot] Starting the Dots dot with 
     	name: 'agent_A', 
     	server url: 'https://127.0.0.1:25551', 
     	run directory: '/tmp/dots/'
-[2025-08-05T15:35:01Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
-[2025-08-05T15:35:01Z DEBUG grpc::client] gRPC Communication Client starts.
-[2025-08-05T15:35:01Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-08-05T15:35:01Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
-    	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {"backend": AddCondRunning}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [\"-p\", \"8083:80\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "init_backend", id: "8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [\"echo\", \"init_backend\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {"init_backend": AddCondSucceeded}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [\"-p\", \"8082:80\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
-[2025-08-05T15:35:01Z INFO  dot::runtime_manager] Received the dotops hello with '3' added workloads.
-[2025-08-05T15:35:01Z DEBUG dot::runtime_manager] Handling initial workload list.
-[2025-08-05T15:35:01Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
-[2025-08-05T15:35:01Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
-[2025-08-05T15:35:01Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
-[2025-08-05T15:35:01Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
-[2025-08-05T15:35:01Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:01Z INFO  dot::runtime_manager] No control interface access specified for workload 'init_backend'
-[2025-08-05T15:35:01Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'init_backend'.
-[2025-08-05T15:35:01Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'init_backend'.
-[2025-08-05T15:35:01Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }'.
-[2025-08-05T15:35:01Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:01Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }'.
-[2025-08-05T15:35:01Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A' with image 'dotscloud/nginx:latest'
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:01Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A", "--label=name=init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "echo", "init_backend"]'
-[2025-08-05T15:35:01Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "init_backend", id: "8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
-[2025-08-05T15:35:01Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A' has been created with internal id '499c0d0e0948394b5f09dc74eec7805baf6631f1a1a335003ab473ff1756d6a7'
-[2025-08-05T15:35:02Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A' with internal id '499c0d0e0948394b5f09dc74eec7805baf6631f1a1a335003ab473ff1756d6a7'
-[2025-08-05T15:35:02Z INFO  dot::workload::workload_control_loop] Successfully created workload 'init_backend'.
-[2025-08-05T15:35:02Z DEBUG dot::generic_polling_state_checker] The workload init_backend has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
-[2025-08-05T15:35:02Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "init_backend", id: "8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
-[2025-08-05T15:35:02Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
-[2025-08-05T15:35:02Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:03Z DEBUG dot::generic_polling_state_checker] The workload init_backend has changed its state to ExecutionState { state: Succeeded(Ok), additional_info: "" }
-[2025-08-05T15:35:03Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "init_backend", id: "8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }'.
-[2025-08-05T15:35:03Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
-[2025-08-05T15:35:03Z INFO  dot::runtime_manager] No control interface access specified for workload 'backend'
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'backend'.
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'backend'.
-[2025-08-05T15:35:03Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A' with image 'dotscloud/nginx:latest'
-[2025-08-05T15:35:03Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-08-05T15:35:03Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A", "-p", "8082:80", "--label=name=backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest"]'
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A' has been created with internal id '1c62f941b83aefe35f6fd43ae5f5fbb14c8ba5698de6ea94bcf8897667690adc'
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A' with internal id '1c62f941b83aefe35f6fd43ae5f5fbb14c8ba5698de6ea94bcf8897667690adc'
-[2025-08-05T15:35:03Z INFO  dot::workload::workload_control_loop] Successfully created workload 'backend'.
-[2025-08-05T15:35:03Z DEBUG dot::generic_polling_state_checker] The workload backend has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
-[2025-08-05T15:35:03Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
-[2025-08-05T15:35:03Z INFO  dot::runtime_manager] No control interface access specified for workload 'frontend'
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'frontend'.
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'frontend'.
-[2025-08-05T15:35:03Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A' with image 'dotscloud/nginx:latest'
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A", "-p", "8083:80", "--label=name=frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest"]'
-[2025-08-05T15:35:03Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A' has been created with internal id 'c03443b816bb1e680b7e06ff9db092353e2d6ff5c72664d3aac83de8dbceedfa'
-[2025-08-05T15:35:03Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A' with internal id 'c03443b816bb1e680b7e06ff9db092353e2d6ff5c72664d3aac83de8dbceedfa'
-[2025-08-05T15:35:03Z INFO  dot::workload::workload_control_loop] Successfully created workload 'frontend'.
-[2025-08-05T15:35:03Z DEBUG dot::generic_polling_state_checker] The workload frontend has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
-[2025-08-05T15:35:03Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
+[2025-08-06T14:01:33Z DEBUG grpc::client] gRPC Communication Client starts.
+[2025-08-06T14:01:33Z INFO  dot::agent_manager] Awaiting commands from the dotops ...
+[2025-08-06T14:01:33Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-08-06T14:01:33Z DEBUG dot::agent_manager] Agent 'agent_A' received ServerHello:
+    	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {"init_backend": AddCondSucceeded}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [\"-p\", \"8082:80\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "init_backend", id: "8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandArgs: [\"echo\", \"init_backend\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }, WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {"backend": AddCondRunning}, restart_policy: Never, runtime: "podman", runtime_config: "image: dotscloud/nginx:latest\ncommandOptions: [\"-p\", \"8083:80\"]\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
+[2025-08-06T14:01:33Z INFO  dot::runtime_manager] Received the dotops hello with '3' added workloads.
+[2025-08-06T14:01:33Z DEBUG dot::runtime_manager] Handling initial workload list.
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman' workloads on dot 'agent_A'.
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::podman::podman_runtime] Found 0 reusable workload(s): '[]'
+[2025-08-06T14:01:33Z INFO  dot::runtime_manager] Found '0' existing 'podman' workload(s).
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::runtime_facade] Searching for reusable 'podman-kube' workloads on dot 'agent_A'.
+[2025-08-06T14:01:33Z INFO  dot::runtime_manager] Found '0' existing 'podman-kube' workload(s).
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
+[2025-08-06T14:01:33Z INFO  dot::runtime_manager] No control interface access specified for workload 'init_backend'
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'init_backend'.
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'init_backend'.
+[2025-08-06T14:01:33Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }'.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Pending(WaitingToStart), additional_info: "" } }'.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A' with image 'dotscloud/nginx:latest'
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A", "--label=name=init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest", "echo", "init_backend"]'
+[2025-08-06T14:01:33Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "init_backend", id: "8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A' has been created with internal id 'cebd74b8b93f2e7ec50d593303cb9f40b4b4ee3a24b238afb655f901eb30da2d'
+[2025-08-06T14:01:33Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'init_backend.8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c.agent_A' with internal id 'cebd74b8b93f2e7ec50d593303cb9f40b4b4ee3a24b238afb655f901eb30da2d'
+[2025-08-06T14:01:33Z INFO  dot::workload::workload_control_loop] Successfully created workload 'init_backend'.
+[2025-08-06T14:01:33Z DEBUG dot::generic_polling_state_checker] The workload init_backend has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-08-06T14:01:33Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "init_backend", id: "8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:33Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
+[2025-08-06T14:01:34Z DEBUG dot::generic_polling_state_checker] The workload init_backend has changed its state to ExecutionState { state: Succeeded(Ok), additional_info: "" }
+[2025-08-06T14:01:34Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "init_backend", id: "8127cd601a086390da75e0900a473ba32a0cbc32b2d7a7a82d79da50bfd23e4c" }, execution_state: ExecutionState { state: Succeeded(Ok), additional_info: "" } }'.
+[2025-08-06T14:01:34Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
+[2025-08-06T14:01:34Z INFO  dot::runtime_manager] No control interface access specified for workload 'backend'
+[2025-08-06T14:01:34Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'backend'.
+[2025-08-06T14:01:34Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'backend'.
+[2025-08-06T14:01:34Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-08-06T14:01:34Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-08-06T14:01:34Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'frontend' on waiting queue.
+[2025-08-06T14:01:34Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A' with image 'dotscloud/nginx:latest'
+[2025-08-06T14:01:34Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A", "-p", "8082:80", "--label=name=backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest"]'
+[2025-08-06T14:01:34Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A' has been created with internal id '6705729075da96cb5a55479dea83f079f2f781731add7d8b97263a3353d0f12a'
+[2025-08-06T14:01:34Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A' with internal id '6705729075da96cb5a55479dea83f079f2f781731add7d8b97263a3353d0f12a'
+[2025-08-06T14:01:34Z INFO  dot::workload::workload_control_loop] Successfully created workload 'backend'.
+[2025-08-06T14:01:35Z DEBUG dot::generic_polling_state_checker] The workload backend has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-08-06T14:01:35Z INFO  dot::runtime_manager] No control interface access specified for workload 'frontend'
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::runtime_facade] Skipping creation of control interface for workload 'frontend'.
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::runtime_facade] Creating 'podman' workload 'frontend'.
+[2025-08-06T14:01:35Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Create.
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A' with image 'dotscloud/nginx:latest'
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A", "-p", "8083:80", "--label=name=frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest"]'
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A' has been created with internal id '1c0924ac79b5f11f10a961b41cc792d9b70adafff554e17487bc61c17529b153'
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'frontend.e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086.agent_A' with internal id '1c0924ac79b5f11f10a961b41cc792d9b70adafff554e17487bc61c17529b153'
+[2025-08-06T14:01:35Z INFO  dot::workload::workload_control_loop] Successfully created workload 'frontend'.
+[2025-08-06T14:01:35Z DEBUG dot::generic_polling_state_checker] The workload frontend has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
     	Added workloads: [WorkloadSpec { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136" }, tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {"init_backend": AddCondSucceeded}, restart_policy: Never, runtime: "podman", runtime_config: "commandOptions:\n- -p\n- 8084:80\nimage: dotscloud/nginx:latest\n", files: [], control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] } }]
     	Deleted workloads: [DeletedWorkload { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, dependencies: {"frontend": DelCondNotPendingNorRunning} }]
-[2025-08-05T15:35:04Z INFO  dot::runtime_manager] Received a new desired state with '1' added and '1' deleted workloads.
-[2025-08-05T15:35:04Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:04Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Stopping(WaitingToStop), additional_info: "" } }'.
-[2025-08-05T15:35:04Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Process command received from dotops.
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
+[2025-08-06T14:01:35Z INFO  dot::runtime_manager] Received a new desired state with '1' added and '1' deleted workloads.
+[2025-08-06T14:01:35Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:35Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Stopping(WaitingToStop), additional_info: "" } }'.
+[2025-08-06T14:01:35Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Process command received from dotops.
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Agent 'agent_A' received UpdateWorkload:
     	Added workloads: []
     	Deleted workloads: [DeletedWorkload { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, dependencies: {} }]
-[2025-08-05T15:35:04Z INFO  dot::runtime_manager] Received a new desired state with '0' added and '1' deleted workloads.
-[2025-08-05T15:35:04Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
-[2025-08-05T15:35:04Z INFO  dot::workload] Deleting workload 'frontend'.
-[2025-08-05T15:35:04Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Delete.
-[2025-08-05T15:35:04Z DEBUG dot::runtime_connectors::podman::podman_runtime] Deleting workload with id 'c03443b816bb1e680b7e06ff9db092353e2d6ff5c72664d3aac83de8dbceedfa'
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }'.
-[2025-08-05T15:35:04Z INFO  dot::runtime_manager] No control interface access specified for updated workload 'backend'
-[2025-08-05T15:35:04Z INFO  dot::workload] Updating workload 'backend'.
-[2025-08-05T15:35:04Z DEBUG dot::workload] Send WorkloadCommand::Update.
-[2025-08-05T15:35:04Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Update.
-[2025-08-05T15:35:04Z DEBUG dot::runtime_connectors::podman::podman_runtime] Deleting workload with id '1c62f941b83aefe35f6fd43ae5f5fbb14c8ba5698de6ea94bcf8897667690adc'
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }'.
-[2025-08-05T15:35:04Z DEBUG dot::workload::workload_control_loop] Stop workload complete
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }'.
-[2025-08-05T15:35:04Z DEBUG dot::workload::workload_control_loop] Deleting the workload files of workload 'backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A'
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }'.
-[2025-08-05T15:35:04Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A' with image 'dotscloud/nginx:latest'
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
-[2025-08-05T15:35:04Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A", "-p", "8084:80", "--label=name=backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest"]'
-[2025-08-05T15:35:04Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A' has been created with internal id 'e813daf3d0c6b615dadbdb8e425177251b4a8a8b92ba22c7a7e3a90b423e7f27'
-[2025-08-05T15:35:04Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A' with internal id 'e813daf3d0c6b615dadbdb8e425177251b4a8a8b92ba22c7a7e3a90b423e7f27'
-[2025-08-05T15:35:04Z INFO  dot::workload::workload_control_loop] Successfully created workload 'backend'.
-[2025-08-05T15:35:04Z DEBUG dot::workload::workload_control_loop] Update workload complete
-[2025-08-05T15:35:04Z DEBUG dot::generic_polling_state_checker] The workload backend has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
-[2025-08-05T15:35:04Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
-[2025-08-05T15:35:04Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
-[2025-08-05T15:35:04Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'
+[2025-08-06T14:01:35Z INFO  dot::runtime_manager] Received a new desired state with '0' added and '1' deleted workloads.
+[2025-08-06T14:01:35Z DEBUG dot::workload_scheduler::scheduler] Putting workload 'backend' on waiting queue.
+[2025-08-06T14:01:35Z INFO  dot::workload] Deleting workload 'frontend'.
+[2025-08-06T14:01:35Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Delete.
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman::podman_runtime] Deleting workload with id '1c0924ac79b5f11f10a961b41cc792d9b70adafff554e17487bc61c17529b153'
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }'.
+[2025-08-06T14:01:35Z INFO  dot::runtime_manager] No control interface access specified for updated workload 'backend'
+[2025-08-06T14:01:35Z INFO  dot::workload] Updating workload 'backend'.
+[2025-08-06T14:01:35Z DEBUG dot::workload] Send WorkloadCommand::Update.
+[2025-08-06T14:01:35Z DEBUG dot::workload::workload_control_loop] Received WorkloadCommand::Update.
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman::podman_runtime] Deleting workload with id '6705729075da96cb5a55479dea83f079f2f781731add7d8b97263a3353d0f12a'
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Stopping(RequestedAtRuntime), additional_info: "" } }'.
+[2025-08-06T14:01:35Z DEBUG dot::workload::workload_control_loop] Stop workload complete
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "frontend", id: "e1c03b39f254c88d21f6011502860cd6770108161152d7aa3017bdcbe5d6f086" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }'.
+[2025-08-06T14:01:35Z DEBUG dot::workload::workload_control_loop] Deleting the workload files of workload 'backend.31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50.agent_A'
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "31c46be0aa2fd9e30fb7f6f5a19eea72c1a66f6bac0624f183bd5db98eb68c50" }, execution_state: ExecutionState { state: Removed, additional_info: "" } }'.
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136" }, execution_state: ExecutionState { state: Pending(Starting), additional_info: "Triggered at runtime." } }'.
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman_cli] Creating the workload 'backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A' with image 'dotscloud/nginx:latest'
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman_cli] The args are: '["run", "--detach", "--name", "backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A", "-p", "8084:80", "--label=name=backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A", "--label=dot=agent_A", "dotscloud/nginx:latest"]'
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman::podman_runtime] The workload 'backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A' has been created with internal id '44fb48b9e0605e1dcb52fe0b80ca11de740fe5ba8ec0e55f617309452bdb835c'
+[2025-08-06T14:01:35Z DEBUG dot::runtime_connectors::podman::podman_runtime] Starting the checker for the workload 'backend.cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136.agent_A' with internal id '44fb48b9e0605e1dcb52fe0b80ca11de740fe5ba8ec0e55f617309452bdb835c'
+[2025-08-06T14:01:35Z INFO  dot::workload::workload_control_loop] Successfully created workload 'backend'.
+[2025-08-06T14:01:35Z DEBUG dot::workload::workload_control_loop] Update workload complete
+[2025-08-06T14:01:35Z DEBUG dot::generic_polling_state_checker] The workload backend has changed its state to ExecutionState { state: Running(Ok), additional_info: "" }
+[2025-08-06T14:01:35Z DEBUG dot::agent_manager] Storing and forwarding local workload state 'WorkloadState { instance_name: WorkloadInstanceName { agent_name: "agent_A", workload_name: "backend", id: "cbf7a78f1de1e19a303d1a9b389f8b65ec6e4ccd767df07fc779625d03b2e136" }, execution_state: ExecutionState { state: Running(Ok), additional_info: "" } }'.
+[2025-08-06T14:01:36Z DEBUG grpc::client] Forward from dotops message from proto to Dots task completed
+[2025-08-06T14:01:36Z WARN  grpc::client] Connection to dotops interrupted: 'Ok(())'
