@@ -1,35 +1,35 @@
-[2025-08-06T16:00:30Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
-[2025-08-06T16:00:30Z DEBUG dotops] Starting the Dots dotops with 
+[2025-08-06T16:13:29Z DEBUG dotops] No config file found at default path '/etc/dots/dotctl-dotops.conf'. Using cli arguments and environment variables only.
+[2025-08-06T16:13:29Z DEBUG dotops] Starting the Dots dotops with 
     	dotops address: '127.0.0.1:25551', 
     	startup manifest path: '[no manifest file provided]'
-[2025-08-06T16:00:30Z WARN  grpc::server] !!!DOTOPS IS STARTED IN INSECURE MODE (-k, --insecure) -> TLS is disabled!!!
-[2025-08-06T16:00:30Z INFO  dotops::dots_server] No startup manifest provided -> waiting for new workloads from the CLI
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server] Start listening to agents...
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-6e21eef9-4a5d-4c30-a5fc-034eb27ff9ec) open.
-[2025-08-06T16:00:30Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-6e21eef9-4a5d-4c30-a5fc-034eb27ff9ec'
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-6e21eef9-4a5d-4c30-a5fc-034eb27ff9ec@0eeb7658-0a7d-49b5-84fe-23fb3c5f50bb' and field mask: '[]'
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-6e21eef9-4a5d-4c30-a5fc-034eb27ff9ec) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-6e21eef9-4a5d-4c30-a5fc-034eb27ff9ec) has been closed.
-[2025-08-06T16:00:30Z INFO  dotops::dots_server] Received AgentHello from 'agent_A'
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server] No workload states to send.
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server] Sending initial ServerHello to dot 'agent_A' with added workloads: '[]'
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-22392085-7040-4228-81a7-d6b4e0aca888) open.
-[2025-08-06T16:00:30Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-22392085-7040-4228-81a7-d6b4e0aca888'
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-22392085-7040-4228-81a7-d6b4e0aca888@60b5903a-1b74-4a0d-a816-ddd6b6df3fa0' and field mask: '[]'
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-22392085-7040-4228-81a7-d6b4e0aca888) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-22392085-7040-4228-81a7-d6b4e0aca888) has been closed.
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-4f67a415-3ab9-41dd-9b0b-8fd4d9c6720d) open.
-[2025-08-06T16:00:30Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-4f67a415-3ab9-41dd-9b0b-8fd4d9c6720d'
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-4f67a415-3ab9-41dd-9b0b-8fd4d9c6720d@77f4e939-563e-4b58-a896-541dd7870e20' and field mask: '[]'
-[2025-08-06T16:00:30Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-4f67a415-3ab9-41dd-9b0b-8fd4d9c6720d'
-[2025-08-06T16:00:30Z DEBUG grpc::to_server_proxy] Received UpdateStateRequest from 'cli-conn-4f67a415-3ab9-41dd-9b0b-8fd4d9c6720d'
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server] Received UpdateState. State 'CompleteState { desired_state: State { api_version: "v0.1", workloads: {"sleepy_workload_with_a_really_long_name_that_will_cause_test_failure": StoredWorkloadSpec { agent: "agent_A", tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Always, runtime: "podman", runtime_config: "image: dotscloud/sleepy:latest\n", control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] }, configs: {}, files: [] }}, configs: {} }, workload_states: WorkloadStatesMap({}), agents: AgentMap({}) }', update mask '["desiredState"]'
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'sleepy_workload_with_a_really_long_name_that_will_cause_test_failure' as no config is assigned to the workload
-[2025-08-06T16:00:30Z ERROR dotops::dots_server] Update rejected: 'Resulting State is invalid, reason: 'Workload name length 68 exceeds the maximum limit of 63 characters''
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-4f67a415-3ab9-41dd-9b0b-8fd4d9c6720d) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-4f67a415-3ab9-41dd-9b0b-8fd4d9c6720d) has been closed.
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-abe0fbf6-72e4-4c8e-8b50-d4151dbf7814) open.
-[2025-08-06T16:00:30Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-abe0fbf6-72e4-4c8e-8b50-d4151dbf7814'
-[2025-08-06T16:00:30Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-abe0fbf6-72e4-4c8e-8b50-d4151dbf7814@41873979-968a-4173-9637-f3901d28f7f9' and field mask: '[]'
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-abe0fbf6-72e4-4c8e-8b50-d4151dbf7814) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
-[2025-08-06T16:00:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-abe0fbf6-72e4-4c8e-8b50-d4151dbf7814) has been closed.
+[2025-08-06T16:13:29Z INFO  dotops::dots_server] No startup manifest provided -> waiting for new workloads from the CLI
+[2025-08-06T16:13:29Z DEBUG dotops::dots_server] Start listening to agents...
+[2025-08-06T16:13:29Z WARN  grpc::server] !!!DOTOPS IS STARTED IN INSECURE MODE (-k, --insecure) -> TLS is disabled!!!
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-c2060f53-b4cc-49e0-98b5-2eb30d342f4e) open.
+[2025-08-06T16:13:29Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-c2060f53-b4cc-49e0-98b5-2eb30d342f4e'
+[2025-08-06T16:13:29Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-c2060f53-b4cc-49e0-98b5-2eb30d342f4e@e62be9c5-6339-4bf7-9c4c-2486c28e12ae' and field mask: '[]'
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-c2060f53-b4cc-49e0-98b5-2eb30d342f4e) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-c2060f53-b4cc-49e0-98b5-2eb30d342f4e) has been closed.
+[2025-08-06T16:13:29Z INFO  dotops::dots_server] Received AgentHello from 'agent_A'
+[2025-08-06T16:13:29Z DEBUG dotops::dots_server] No workload states to send.
+[2025-08-06T16:13:29Z DEBUG dotops::dots_server] Sending initial ServerHello to dot 'agent_A' with added workloads: '[]'
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-80c2aa51-a4e4-4e1f-bf51-0f8e65efd3b4) open.
+[2025-08-06T16:13:29Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-80c2aa51-a4e4-4e1f-bf51-0f8e65efd3b4'
+[2025-08-06T16:13:29Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-80c2aa51-a4e4-4e1f-bf51-0f8e65efd3b4@c12f7611-6e42-4ff5-80e0-9ed885fbdcd8' and field mask: '[]'
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-80c2aa51-a4e4-4e1f-bf51-0f8e65efd3b4) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-80c2aa51-a4e4-4e1f-bf51-0f8e65efd3b4) has been closed.
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-33e06728-261f-445d-9ecb-6c5100b725f1) open.
+[2025-08-06T16:13:29Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-33e06728-261f-445d-9ecb-6c5100b725f1'
+[2025-08-06T16:13:29Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-33e06728-261f-445d-9ecb-6c5100b725f1@989169d3-f200-479b-a682-f82b05d448e8' and field mask: '[]'
+[2025-08-06T16:13:29Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-33e06728-261f-445d-9ecb-6c5100b725f1'
+[2025-08-06T16:13:29Z DEBUG grpc::to_server_proxy] Received UpdateStateRequest from 'cli-conn-33e06728-261f-445d-9ecb-6c5100b725f1'
+[2025-08-06T16:13:29Z DEBUG dotops::dots_server] Received UpdateState. State 'CompleteState { desired_state: State { api_version: "v0.1", workloads: {"sleepy_workload_with_a_really_long_name_that_will_cause_test_failure": StoredWorkloadSpec { agent: "agent_A", tags: [Tag { key: "owner", value: "Dots team" }], dependencies: {}, restart_policy: Always, runtime: "podman", runtime_config: "image: dotscloud/sleepy:latest\n", control_interface_access: ControlInterfaceAccess { allow_rules: [], deny_rules: [] }, configs: {}, files: [] }}, configs: {} }, workload_states: WorkloadStatesMap({}), agents: AgentMap({}) }', update mask '["desiredState"]'
+[2025-08-06T16:13:29Z DEBUG dotops::dots_server::config_renderer] Skipping to render workload 'sleepy_workload_with_a_really_long_name_that_will_cause_test_failure' as no config is assigned to the workload
+[2025-08-06T16:13:29Z ERROR dotops::dots_server] Update rejected: 'Resulting State is invalid, reason: 'Workload name length 68 exceeds the maximum limit of 63 characters''
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-33e06728-261f-445d-9ecb-6c5100b725f1) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T16:13:29Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-33e06728-261f-445d-9ecb-6c5100b725f1) has been closed.
+[2025-08-06T16:13:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-d99d2923-bc2d-4930-bec8-77239e5dbdd5) open.
+[2025-08-06T16:13:30Z DEBUG grpc::to_server_proxy] Received Request from 'cli-conn-d99d2923-bc2d-4930-bec8-77239e5dbdd5'
+[2025-08-06T16:13:30Z DEBUG dotops::dots_server] Received CompleteStateRequest with id 'cli-conn-d99d2923-bc2d-4930-bec8-77239e5dbdd5@818fdf1f-19a4-4612-8754-5219a52c95f0' and field mask: '[]'
+[2025-08-06T16:13:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-d99d2923-bc2d-4930-bec8-77239e5dbdd5) failed with Err(ConnectionInterrupted("status: Unknown, message: \"h2 protocol error: error reading a body from connection: stream closed because of a broken pipe\", details: [], metadata: MetadataMap { headers: {} }")).
+[2025-08-06T16:13:30Z DEBUG grpc::grpc_cli_connection] Connection to CLI (name=cli-conn-d99d2923-bc2d-4930-bec8-77239e5dbdd5) has been closed.
